@@ -12,5 +12,11 @@
 </head>
 <body>
     Hello !
+
+    <a href="/bills"> bills</a>
+    <a href="/consumption">consumption</a>
+    <a href="/shopping">shopping</a>
+
+
 </body>
 </html>
