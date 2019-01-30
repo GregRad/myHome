@@ -1,16 +1,15 @@
-package pl.gregrad.myhome.controllers;
-
+package pl.gregrad.myhome.controllers.ShoppingControllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/consumption")
-public class ConsumptionController {
+@RequestMapping("/shopping")
+public class ShoppingController {
 
     @GetMapping
-    public String consumption() {
-        return "Consumption";
+    public String shopping() {
+        return "Shopping";
     }
 }

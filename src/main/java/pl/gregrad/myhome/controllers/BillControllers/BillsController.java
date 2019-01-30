@@ -1,4 +1,4 @@
-package pl.gregrad.myhome.controllers;
+package pl.gregrad.myhome.controllers.BillControllers;
 
 
 import org.springframework.stereotype.Controller;
