@@ -10,6 +10,6 @@ public class ShoppingController {
 
     @GetMapping
     public String shopping() {
-        return "Shopping";
+        return "ShoppingList";
     }
 }
