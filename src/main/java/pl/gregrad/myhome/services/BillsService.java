@@ -31,10 +31,10 @@ public class BillsService {
         return billsList;
     }
 
-    public void deleteBill(Long id){
+    public void delete(Long id){
         billsRepository.delete(billsRepository.findOne(id));
     }
-    public void editBill(BillsDTO bill) {
+    public void edit(BillsDTO bill) {
         Bills editBill = billsRepository.findOne(bill.getId());
         editBill.setName(bill.getName());
         editBill.setValue(bill.getValue());

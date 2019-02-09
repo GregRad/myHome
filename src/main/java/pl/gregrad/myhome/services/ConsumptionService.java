@@ -19,22 +19,22 @@ public class ConsumptionService {
     private ConsumptionRepository consumptionRepository;
 
     public List<ConsumptionDTO> findAllConsumption() {
-        List<Consumption> consumption = consumptionRepository.findAll();
-        List<ConsumptionDTO> allConsumption = new ArrayList<>();
-        for (Consumption c : consumption) {
-            ConsumptionDTO consumptionAll = new ConsumptionDTO();
-            consumptionAll.setName(c.getName());
-            consumptionAll.setValue(c.getValue());
-            allConsumption.add(consumptionAll);
+        List<Consumption> consumptions = consumptionRepository.findAll();
+        List<ConsumptionDTO> consumptionList = new ArrayList<>();
+        for (Consumption c : consumptions) {
+            ConsumptionDTO allConsumptions = new ConsumptionDTO();
+            allConsumptions.setName(c.getName());
+            allConsumptions.setValue(c.getValue());
+            consumptionList.add(allConsumptions);
         }
-        return allConsumption;
+        return consumptionList;
     }
 
-    public void deleteConsumption(Long id) {
+    public void delete(Long id) {
         consumptionRepository.delete(consumptionRepository.findOne(id));
     }
 
-    public void editConsumption(ConsumptionDTO consumption) {
+    public void edit(ConsumptionDTO consumption) {
         Consumption editConsumption = consumptionRepository.findOne(consumption.getId());
         editConsumption.setName(consumption.getName());
         editConsumption.setValue(consumption.getValue());
