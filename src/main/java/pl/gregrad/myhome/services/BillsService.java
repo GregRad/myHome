@@ -34,6 +34,7 @@ public class BillsService {
     public void delete(Long id){
         billsRepository.delete(billsRepository.findOne(id));
     }
+
     public void edit(BillsDTO bill) {
         Bills editBill = billsRepository.findOne(bill.getId());
         editBill.setName(bill.getName());
