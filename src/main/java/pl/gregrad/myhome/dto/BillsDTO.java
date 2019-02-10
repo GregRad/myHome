@@ -1,5 +1,7 @@
 package pl.gregrad.myhome.dto;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.time.LocalDateTime;
 
 public class BillsDTO {
@@ -7,6 +9,7 @@ public class BillsDTO {
     private Long id;
     private String name;
     private String value;
+    @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime paymentDate;
 
     public Long getId() {
