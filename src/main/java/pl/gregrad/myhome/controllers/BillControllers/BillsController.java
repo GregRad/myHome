@@ -12,13 +12,13 @@ import pl.gregrad.myhome.services.BillsService;
 import java.util.List;
 
 @Controller
-@RequestMapping("/bills")
+@RequestMapping("/all_Bills")
 public class BillsController {
 
     @Autowired
     private BillsService billsService;
 
-    @GetMapping("/allBills")
+    @GetMapping
     public String bills(Model model) {
         List<BillsDTO> allBills = billsService.findAllBills();
         model.addAttribute("bills", allBills);
