@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.gregrad.myhome.dto.BillsDTO;
 import pl.gregrad.myhome.services.BillsService;
@@ -12,13 +13,13 @@ import pl.gregrad.myhome.services.BillsService;
 import java.util.List;
 
 @Controller
-@RequestMapping("/all_Bills")
+@RequestMapping("/bills")
 public class BillsController {
 
     @Autowired
     private BillsService billsService;
 
-    @GetMapping
+    @GetMapping("/all_Bills")
     public String bills(Model model) {
         List<BillsDTO> allBills = billsService.findAllBills();
         model.addAttribute("bills", allBills);
