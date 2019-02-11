@@ -2,6 +2,7 @@ package pl.gregrad.myhome.entity;
 
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -12,7 +13,7 @@ public class Bills {
     private Long id;
     private String name;
     private String value;
-    private LocalDateTime paymentDate;
+    private LocalDate paymentDate;
 
     public Long getId() {
         return id;
@@ -38,11 +39,11 @@ public class Bills {
         this.value = value;
     }
 
-    public LocalDateTime getPaymentDate() {
+    public LocalDate getPaymentDate() {
         return paymentDate;
     }
 
-    public void setPaymentDate(LocalDateTime paymentDate) {
+    public void setPaymentDate(LocalDate paymentDate) {
         this.paymentDate = paymentDate;
     }
 }
