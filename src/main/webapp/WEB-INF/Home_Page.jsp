@@ -12,8 +12,8 @@
 </head>
 <body>
     Hello !
-    <a href="/add_Bill">add bills</a>
-    <a href="/all_Bills"> all bills</a>
+    <a href="bills/add_Bill">add bills</a>
+    <a href="bills/all_Bills"> all bills</a>
     <a href="/consumption">consumption</a>
     <a href="/shopping">shopping</a>
 

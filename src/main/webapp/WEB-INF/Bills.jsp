@@ -13,16 +13,41 @@
     <title>Title</title>
 </head>
 <body>
-<table>
+Rachunki
+<table border="2px">
     <tr>
         <th>
-            Rachunki
+            Nazwa
+        </th>
+        <th>
+            Wartosc
+        </th>
+        <th>
+            Data platnosci
+        </th>
+        <th>
+            Edytuj
+        </th>
+        <th>
+            Usun
         </th>
     </tr>
     <tr>
    <c:forEach items="${bills}" var="bill">
        <td>
            ${bill.name}
+       </td>
+        <td>
+            ${bill.value}
+        </td>
+        <td>
+            ${bill.paymentDate}
+        </td>
+        <td>
+            <a href="bills/edit/${bill.id}"> edytuj </a>
+        </td>
+        <td>
+            <a href="/bills/delete/${bill.id}"> usun </a>
         </td>
     </tr>
 </c:forEach>
