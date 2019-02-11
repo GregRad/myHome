@@ -12,20 +12,20 @@ import pl.gregrad.myhome.entity.Bills;
 import pl.gregrad.myhome.services.AddBillService;
 
 @Controller
-@RequestMapping("/add_Bill")
+@RequestMapping("/bills")
 public class AddBillController {
 
     @Autowired
     private AddBillService addBillService;
 
-    @GetMapping
+    @GetMapping("/add_Bill")
     public String showBillForm(Model model) {
         model.addAttribute("bill", new BillsDTO());
         return "Add_Bill";
     }
-    @PostMapping
+    @PostMapping("/add_Bill")
     public String addBill (@ModelAttribute BillsDTO bill )  {
         addBillService.addBill(bill);
-        return "redirect:/all_Bills";
+        return "redirect:/bills/all_Bills";
     }
 }
