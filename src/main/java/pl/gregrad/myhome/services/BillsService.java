@@ -30,6 +30,15 @@ public class BillsService {
         }
         return billsList;
     }
+    public BillsDTO findBill(Long id) {
+        Bills bill = billsRepository.findOne(id);
+        BillsDTO findBill = new BillsDTO();
+        findBill.setName(bill.getName());
+        findBill.setValue(bill.getValue());
+        findBill.setPaymentDate(bill.getPaymentDate());
+
+        return findBill;
+    }
 
     public void delete(Long id){
         billsRepository.delete(billsRepository.findOne(id));
