@@ -44,7 +44,7 @@ Rachunki
             ${bill.paymentDate}
         </td>
         <td>
-            <a href="bills/edit/${bill.id}"> edytuj </a>
+            <a href="/bills/edit/${bill.id}"> edytuj </a>
         </td>
         <td>
             <a href="/bills/delete/${bill.id}"> usun </a>
