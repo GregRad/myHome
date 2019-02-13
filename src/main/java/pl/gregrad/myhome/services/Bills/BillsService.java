@@ -1,4 +1,4 @@
-package pl.gregrad.myhome.services;
+package pl.gregrad.myhome.services.Bills;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
