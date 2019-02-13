@@ -1,4 +1,4 @@
-package pl.gregrad.myhome.services;
+package pl.gregrad.myhome.services.Consumption;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
