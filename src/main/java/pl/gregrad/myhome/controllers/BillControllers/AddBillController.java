@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.gregrad.myhome.dto.BillsDTO;
-import pl.gregrad.myhome.entity.Bills;
-import pl.gregrad.myhome.services.AddBillService;
+import pl.gregrad.myhome.services.Bills.AddBillService;
 
 @Controller
 @RequestMapping("/bills")
