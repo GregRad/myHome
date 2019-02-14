@@ -18,7 +18,7 @@ public class ConsumptionService {
     @Autowired
     private ConsumptionRepository consumptionRepository;
 
-    public List<ConsumptionDTO> findAllConsumption() {
+    public List<ConsumptionDTO> findAllConsumptions() {
         List<Consumption> consumptions = consumptionRepository.findAll();
         List<ConsumptionDTO> consumptionList = new ArrayList<>();
         for (Consumption c : consumptions) {
@@ -28,6 +28,15 @@ public class ConsumptionService {
             consumptionList.add(allConsumptions);
         }
         return consumptionList;
+    }
+
+    public ConsumptionDTO findConsumption(Long id) {
+        Consumption consumption = consumptionRepository.findOne(id);
+        ConsumptionDTO findConsumption = new ConsumptionDTO();
+        findConsumption.setName(consumption.getName());
+        findConsumption.setValue(consumption.getValue());
+
+        return findConsumption;
     }
 
     public void delete(Long id) {
