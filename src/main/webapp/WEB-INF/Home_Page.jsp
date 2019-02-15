@@ -14,7 +14,8 @@
     Hello !
     <a href="bills/add_Bill">add bills</a>
     <a href="bills/all_Bills"> all bills</a>
-    <a href="/consumption">consumption</a>
+    <a href="/consumption/add_Consumption"> add consumption</a>
+    <a href="/consumption/all_Consumptions"> all consumption</a>
     <a href="/shopping">shopping</a>
 
 
