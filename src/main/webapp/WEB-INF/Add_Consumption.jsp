@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: radles
@@ -11,6 +12,10 @@
     <title>Title</title>
 </head>
 <body>
-
+    <form:form method="post" modelAttribute="consumptionForm">
+    <form:input path="name" placeholder="Nazwa"/>
+    <form:input path="value" placeholder="Wartosc"/>
+    <input type="submit" value="Zapisz">
+    </form:form>
 </body>
 </html>
