@@ -13,9 +13,13 @@
 <body>
     Hello !
     <a href="bills/add_Bill">add bills</a>
+    <br>
     <a href="bills/all_Bills"> all bills</a>
+    <br>
     <a href="/consumption/add_Consumption"> add consumption</a>
+    <br>
     <a href="/consumption/all_Consumptions"> all consumption</a>
+    <br>
     <a href="/shopping">shopping</a>
 
 
