@@ -11,6 +11,10 @@
     <title>Title</title>
 </head>
 <body>
-
+<form:form method="post" modelAttribute="editConsumption">
+    <form:input path="name" placeholder="Nazwa"/>
+    <form:input path="value" placeholder="Wartosc"/>
+    <input type="submit" value="Zapisz">
+</form:form>
 </body>
 </html>

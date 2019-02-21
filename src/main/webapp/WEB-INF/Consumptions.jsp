@@ -20,6 +20,12 @@
             <th>
                 Wartosc
             </th>
+            <th>
+                Edytuj
+            </th>
+            <th>
+                Usun
+            </th>
         </tr>
         <tr>
             <c:forEach items="${consumptions}" var="consumption">
@@ -29,7 +35,12 @@
             <td>
                 ${consumption.value}
             </td>
-
+            <td>
+                <a href="consumptions/edit/${consumption.id}"> edytuj </a>
+            </td>
+            <td>
+                <a href="consumptions/delete/${consumption.id}"> usun </a>
+            </td>
         </tr>
         </c:forEach>
     </table>
