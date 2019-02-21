@@ -14,12 +14,12 @@ public class EditConsumptionController {
     @Autowired
     private ConsumptionService consumptionService;
 
-    @GetMapping("/editConsumption/{id}")
+    @GetMapping("/edit/{id}")
     public String editConsumptionForm(@PathVariable Long id, Model model) {
         model.addAttribute("editConsumption", consumptionService.findConsumption(id));
         return "Edit_Consumption";
     }
-    @PostMapping("/editConsumption/{id}")
+    @PostMapping("/edit/{id}")
     public String editConsumption(@ModelAttribute ConsumptionDTO editConsumption){
         consumptionService.edit(editConsumption);
         return "redirect:/consumption/all_Consumptions";
