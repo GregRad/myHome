@@ -23,6 +23,7 @@ public class ConsumptionService {
         List<ConsumptionDTO> consumptionList = new ArrayList<>();
         for (Consumption c : consumptions) {
             ConsumptionDTO allConsumptions = new ConsumptionDTO();
+            allConsumptions.setId(c.getId());
             allConsumptions.setName(c.getName());
             allConsumptions.setValue(c.getValue());
             consumptionList.add(allConsumptions);
