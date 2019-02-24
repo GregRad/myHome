@@ -12,6 +12,7 @@
 </head>
 <body>
     Hello !
+    <br>
     <a href="bills/add_Bill">add bills</a>
     <br>
     <a href="bills/all_Bills"> all bills</a>

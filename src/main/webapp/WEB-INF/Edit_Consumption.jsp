@@ -3,9 +3,10 @@
   User: radles
   Date: 29.01.19
   Time: 22:17
-  To change this template use File | Settings | File Templates.
+  To change this tempate use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title>Title</title>

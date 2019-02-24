@@ -36,10 +36,10 @@
                 ${consumption.value}
             </td>
             <td>
-                <a href="consumptions/edit/${consumption.id}"> edytuj </a>
+                <a href="/consumption/edit/${consumption.id}"> edytuj </a>
             </td>
             <td>
-                <a href="consumptions/delete/${consumption.id}"> usun </a>
+                <a href="/consumption/delete/${consumption.id}"> usun </a>
             </td>
         </tr>
         </c:forEach>
