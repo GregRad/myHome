@@ -1,4 +1,4 @@
-package pl.gregrad.myhome.services;
+package pl.gregrad.myhome.services.Shopping;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,7 +29,15 @@ public class ShoppingService {
         }
         return productList;
     }
+    public ShoppingDTO findProduct(Long id) {
+        Shopping shopping = shoppingRepository.findOne(id);
+        ShoppingDTO findProduct = new ShoppingDTO();
+        findProduct.setName(shopping.getName());
+        findProduct.setPrice(shopping.getPrice());
+        findProduct.setDate(shopping.getDate());
+        return findProduct;
 
+    }
     public void delete(Long id) {
         shoppingRepository.delete(shoppingRepository.findOne(id));
     }
