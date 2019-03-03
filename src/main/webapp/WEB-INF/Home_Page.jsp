@@ -21,7 +21,9 @@
     <br>
     <a href="/consumption/all_Consumptions"> all consumption</a>
     <br>
-    <a href="/shopping">shopping</a>
+    <a href="/shopping/add_Product"> add product</a>
+    <br>
+    <a href="/shopping/all_Products">shopping list</a>
 
 
 </body>
