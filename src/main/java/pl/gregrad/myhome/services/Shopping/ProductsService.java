@@ -2,9 +2,9 @@ package pl.gregrad.myhome.services.Shopping;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pl.gregrad.myhome.dto.ShoppingDTO;
-import pl.gregrad.myhome.entity.Shopping;
-import pl.gregrad.myhome.repositories.ShoppingRepository;
+import pl.gregrad.myhome.dto.ProductsDTO;
+import pl.gregrad.myhome.entity.Products;
+import pl.gregrad.myhome.repositories.ProductsRepository;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -15,13 +15,13 @@ import java.util.List;
 public class ShoppingService {
 
     @Autowired
-    private ShoppingRepository shoppingRepository;
+    private ProductsRepository shoppingRepository;
 
-    public List<ShoppingDTO> findAllproducts() {
-        List<Shopping> products = shoppingRepository.findAll();
-        List<ShoppingDTO> productList = new ArrayList<>();
-        for (Shopping s : products) {
-            ShoppingDTO allProducts = new ShoppingDTO();
+    public List<ProductsDTO> findAllproducts() {
+        List<Products> products = shoppingRepository.findAll();
+        List<ProductsDTO> productList = new ArrayList<>();
+        for (Products s : products) {
+            ProductsDTO allProducts = new ProductsDTO();
             allProducts.setName(s.getName());
             allProducts.setPrice(s.getPrice());
             allProducts.setDate(s.getDate());
@@ -29,12 +29,12 @@ public class ShoppingService {
         }
         return productList;
     }
-    public ShoppingDTO findProduct(Long id) {
-        Shopping shopping = shoppingRepository.findOne(id);
-        ShoppingDTO findProduct = new ShoppingDTO();
-        findProduct.setName(shopping.getName());
-        findProduct.setPrice(shopping.getPrice());
-        findProduct.setDate(shopping.getDate());
+    public ProductsDTO findProduct(Long id) {
+        Products products = shoppingRepository.findOne(id);
+        ProductsDTO findProduct = new ProductsDTO();
+        findProduct.setName(products.getName());
+        findProduct.setPrice(products.getPrice());
+        findProduct.setDate(products.getDate());
         return findProduct;
 
     }
@@ -42,8 +42,8 @@ public class ShoppingService {
         shoppingRepository.delete(shoppingRepository.findOne(id));
     }
 
-    public void edit(ShoppingDTO product) {
-        Shopping editProduct = shoppingRepository.findOne(product.getId());
+    public void edit(ProductsDTO product) {
+        Products editProduct = shoppingRepository.findOne(product.getId());
         editProduct.setDate(product.getDate());
         editProduct.setName(product.getName());
         editProduct.setPrice(product.getPrice());

@@ -2,8 +2,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: radles
-  Date: 29.01.19
-  Time: 22:16
+  Date: 04.03.19
+  Time: 20:26
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,7 +12,7 @@
     <title>Title</title>
 </head>
 <body>
-<form:form method="post" modelAttribute="editProduct">
+<form:form method="post" modelAttribute="productForm">
     <form:input path="name" placeholder="Nazwa"/>
     <form:input path="price" placeholder="Cena"/>
     <form:input path="date" placeholder="Data (wzór: DD/MM/YYYY)"/><br/>
