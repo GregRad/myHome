@@ -1,11 +1,14 @@
 package pl.gregrad.myhome.dto;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.time.LocalDateTime;
 
-public class ShoppingDTO {
+public class ProductsDTO {
     private Long id;
     private String name;
-    private Integer price;
+    private String price;
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDateTime date;
 
     public Long getId() {
@@ -24,11 +27,11 @@ public class ShoppingDTO {
         this.name = name;
     }
 
-    public Integer getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
