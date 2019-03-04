@@ -11,20 +11,20 @@ import pl.gregrad.myhome.dto.ProductsDTO;
 import pl.gregrad.myhome.services.Shopping.AddProductsService;
 
 @Controller
-@RequestMapping("/shopping")
-public class AddProductController {
+@RequestMapping("/products")
+public class AddProductsController {
 
     @Autowired
-    AddProductsService addShoppingService;
+    AddProductsService addProductService;
 
-    @GetMapping
+    @GetMapping("/add_Product")
     public String addProductForm(Model model) {
         model.addAttribute("productForm", new ProductsDTO());
         return "Add_Product";
     }
-    @PostMapping
+    @PostMapping("/add_Product")
     public String addProduct(@ModelAttribute ProductsDTO product) {
-        addShoppingService.addProduct(product);
-        return "redirect:/shopping/all_Products";
+        addProductService.addProduct(product);
+        return "redirect:/products/all_Products";
     }
 }

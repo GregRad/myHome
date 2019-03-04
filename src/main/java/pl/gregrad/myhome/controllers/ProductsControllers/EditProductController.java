@@ -1,27 +1,27 @@
-package pl.gregrad.myhome.controllers.ShoppingControllers;
+package pl.gregrad.myhome.controllers.ProductsControllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import pl.gregrad.myhome.dto.ShoppingDTO;
-import pl.gregrad.myhome.services.Shopping.ShoppingService;
+import pl.gregrad.myhome.dto.ProductsDTO;
+import pl.gregrad.myhome.services.Shopping.ProductsService;
 
 @Controller
-@RequestMapping("/shopping")
+@RequestMapping("/products")
 public class EditProductController {
 
     @Autowired
-    ShoppingService shoppingService;
+    ProductsService productsService;
 
     @GetMapping("/edit/{id}")
     public String editProductForm(@PathVariable Long id, Model model) {
-        model.addAttribute("editProduct", shoppingService.findProduct(id));
+        model.addAttribute("editProduct", productsService.findProduct(id));
         return "Edit_Product";
     }
     @PostMapping("/edit/{id}")
-    public String editProduct(@ModelAttribute ShoppingDTO editProduct) {
-        shoppingService.edit(editProduct);
-        return "redirect:/shopping/all_Products";
+    public String editProduct(@ModelAttribute ProductsDTO editProduct) {
+        productsService.edit(editProduct);
+        return "redirect:/products/all_Products";
     }
 }
