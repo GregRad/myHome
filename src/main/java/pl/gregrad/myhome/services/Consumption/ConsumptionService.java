@@ -34,6 +34,7 @@ public class ConsumptionService {
     public ConsumptionDTO findConsumption(Long id) {
         Consumption consumption = consumptionRepository.findOne(id);
         ConsumptionDTO findConsumption = new ConsumptionDTO();
+        findConsumption.setId(consumption.getId());
         findConsumption.setName(consumption.getName());
         findConsumption.setValue(consumption.getValue());
 

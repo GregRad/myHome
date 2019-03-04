@@ -12,16 +12,17 @@ import java.util.List;
 
 @Service
 @Transactional
-public class ShoppingService {
+public class ProductsService {
 
     @Autowired
-    private ProductsRepository shoppingRepository;
+    private ProductsRepository productsRepository;
 
-    public List<ProductsDTO> findAllproducts() {
-        List<Products> products = shoppingRepository.findAll();
+    public List<ProductsDTO> findAllProducts() {
+        List<Products> products = productsRepository.findAll();
         List<ProductsDTO> productList = new ArrayList<>();
         for (Products s : products) {
             ProductsDTO allProducts = new ProductsDTO();
+            allProducts.setId(s.getId());
             allProducts.setName(s.getName());
             allProducts.setPrice(s.getPrice());
             allProducts.setDate(s.getDate());
@@ -30,8 +31,9 @@ public class ShoppingService {
         return productList;
     }
     public ProductsDTO findProduct(Long id) {
-        Products products = shoppingRepository.findOne(id);
+        Products products = productsRepository.findOne(id);
         ProductsDTO findProduct = new ProductsDTO();
+        findProduct.setId(products.getId());
         findProduct.setName(products.getName());
         findProduct.setPrice(products.getPrice());
         findProduct.setDate(products.getDate());
@@ -39,15 +41,15 @@ public class ShoppingService {
 
     }
     public void delete(Long id) {
-        shoppingRepository.delete(shoppingRepository.findOne(id));
+        productsRepository.delete(productsRepository.findOne(id));
     }
 
     public void edit(ProductsDTO product) {
-        Products editProduct = shoppingRepository.findOne(product.getId());
+        Products editProduct = productsRepository.findOne(product.getId());
         editProduct.setDate(product.getDate());
         editProduct.setName(product.getName());
         editProduct.setPrice(product.getPrice());
-        shoppingRepository.save(editProduct);
+        productsRepository.save(editProduct);
 
     }
 

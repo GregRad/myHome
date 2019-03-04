@@ -33,6 +33,7 @@ public class BillsService {
     public BillsDTO findBill(Long id) {
         Bills bill = billsRepository.findOne(id);
         BillsDTO findBill = new BillsDTO();
+        findBill.setId(bill.getId());
         findBill.setName(bill.getName());
         findBill.setValue(bill.getValue());
         findBill.setPaymentDate(bill.getPaymentDate());

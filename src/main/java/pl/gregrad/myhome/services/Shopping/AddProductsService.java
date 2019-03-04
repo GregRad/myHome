@@ -11,7 +11,7 @@ import javax.transaction.Transactional;
 
 @Service
 @Transactional
-public class AddShoppingService {
+public class AddProductsService {
 
     @Autowired
     ProductsRepository shoppingRepository;
