@@ -4,11 +4,12 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
+
 public class ProductsDTO {
     private Long id;
     private String name;
     private String price;
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
     private LocalDateTime date;
 
     public Long getId() {
