@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: radles
@@ -8,9 +9,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Usun rachunek</title>
 </head>
 <body>
+        Potwierdzasz usuniecie rachunku ${bill.name} ${bill.value} ?
+        <a href="/bills/delete/${bill.id}"> Tak </a>
+        <a href="/bills/all_Bills" > Nie </a>
 
 </body>
 </html>

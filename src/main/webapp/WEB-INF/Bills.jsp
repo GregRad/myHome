@@ -47,7 +47,7 @@ Rachunki
             <a href="/bills/edit/${bill.id}"> edytuj </a>
         </td>
         <td>
-            <a href="/bills/delete/${bill.id}"> usun </a>
+            <a href="/bills/confirm/delete_bill/${bill.id}"> usun </a>
         </td>
     </tr>
 </c:forEach>

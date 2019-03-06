@@ -39,7 +39,7 @@
                 <a href="/consumption/edit/${consumption.id}"> edytuj </a>
             </td>
             <td>
-                <a href="/consumption/delete/${consumption.id}"> usun </a>
+                <a href="/confirm/delete_consumption/${consumption.id}"> usun</a>
             </td>
         </tr>
         </c:forEach>
