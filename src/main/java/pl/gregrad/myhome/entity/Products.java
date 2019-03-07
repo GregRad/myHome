@@ -1,7 +1,7 @@
 package pl.gregrad.myhome.entity;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "Products")
@@ -11,7 +11,7 @@ public class Products {
     private Long id;
     private String name;
     private String price;
-    private LocalDateTime date;
+    private LocalDate date;
 
     public Long getId() { return id; }
 
@@ -35,11 +35,11 @@ public class Products {
         this.price = price;
     }
 
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 }
