@@ -46,7 +46,7 @@
                 <a href="/products/edit/${products.id}"> Edytuj </a>
             </td>
             <td>
-                <a href="/products/delete/${products.id}"> Usuń</a>
+                <a href="/products/confirm/${products.id}"> Usuń</a>
             </td>
         </tr>
 
