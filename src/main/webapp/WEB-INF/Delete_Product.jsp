@@ -8,7 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Usuniecie produktu</title>
+    <title>Usun produkt</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
         Potwierdzasz usuniecie produktu ${product.name} ${product.price} ?

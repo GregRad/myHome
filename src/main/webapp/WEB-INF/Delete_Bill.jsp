@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>Usun rachunek</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
         Potwierdzasz usuniecie rachunku ${bill.name} ${bill.value} ?

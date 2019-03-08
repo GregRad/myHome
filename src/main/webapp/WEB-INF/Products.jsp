@@ -10,9 +10,12 @@
 <html>
 <head>
     <title>Zakupy</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    Lista zakupów
+    Podsumowanie zakupów
+    <br>
+    <br>
     <table border="2px">
         <tr>
             <th>

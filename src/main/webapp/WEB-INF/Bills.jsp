@@ -10,10 +10,13 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Rachunki</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-Rachunki
+Wszystkie rachunki
+<br>
+<br>
 <table border="2px">
     <tr>
         <th>

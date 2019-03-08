@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Usun zuzycie</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
         Potwierdzasz usuniecie zuzycia ${consumption.name} ${consumption.value}?

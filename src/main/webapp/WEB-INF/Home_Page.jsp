@@ -9,17 +9,21 @@
 <html>
 <head>
     <title>Title</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    Hello !
+    myHome !
+    <br>
     <br>
     <a href="bills/add_Bill">add bills</a>
     <br>
     <a href="bills/all_Bills"> all bills</a>
     <br>
+    <br>
     <a href="/consumption/add_Consumption"> add consumption</a>
     <br>
     <a href="/consumption/all_Consumptions"> all consumption</a>
+    <br>
     <br>
     <a href="/products/add_Product"> add product</a>
     <br>

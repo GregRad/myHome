@@ -9,9 +9,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Dodaj zuzycie</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    Nowe zuzycie:
     <form:form method="post" modelAttribute="consumptionForm">
     <form:input path="name" placeholder="Nazwa"/>
     <form:input path="value" placeholder="Wartosc"/>

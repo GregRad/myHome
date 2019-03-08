@@ -9,9 +9,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Zużycie</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    Zuzycie
+    <br>
+    <br>
     <table border="2px">
         <tr>
             <th>
