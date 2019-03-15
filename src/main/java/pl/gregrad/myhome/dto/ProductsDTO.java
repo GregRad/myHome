@@ -12,6 +12,7 @@ public class ProductsDTO {
     private String price;
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDate date;
+    private String category;
 
     public Long getId() {
         return id;
@@ -43,5 +44,13 @@ public class ProductsDTO {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

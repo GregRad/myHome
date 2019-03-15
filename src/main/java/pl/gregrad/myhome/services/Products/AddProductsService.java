@@ -1,4 +1,4 @@
-package pl.gregrad.myhome.services.Shopping;
+package pl.gregrad.myhome.services.Products;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +21,7 @@ public class AddProductsService {
         product.setName(productForm.getName());
         product.setPrice(productForm.getPrice());
         product.setDate(productForm.getDate());
+        product.setCategory(productForm.getCategory());
         shoppingRepository.save(product);
     }
 

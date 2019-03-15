@@ -12,6 +12,7 @@ public class Products {
     private String name;
     private String price;
     private LocalDate date;
+    private String category;
 
     public Long getId() { return id; }
 
@@ -41,5 +42,13 @@ public class Products {
 
     public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

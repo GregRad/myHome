@@ -1,4 +1,4 @@
-package pl.gregrad.myhome.services.Shopping;
+package pl.gregrad.myhome.services.Products;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,6 +26,7 @@ public class ProductsService {
             allProducts.setName(s.getName());
             allProducts.setPrice(s.getPrice());
             allProducts.setDate(s.getDate());
+            allProducts.setCategory(s.getCategory());
             productList.add(allProducts);
         }
         return productList;
@@ -37,6 +38,7 @@ public class ProductsService {
         findProduct.setName(products.getName());
         findProduct.setPrice(products.getPrice());
         findProduct.setDate(products.getDate());
+        findProduct.setCategory(products.getCategory());
         return findProduct;
 
     }
@@ -49,6 +51,7 @@ public class ProductsService {
         editProduct.setDate(product.getDate());
         editProduct.setName(product.getName());
         editProduct.setPrice(product.getPrice());
+        editProduct.setCategory(product.getCategory());
         productsRepository.save(editProduct);
 
     }
