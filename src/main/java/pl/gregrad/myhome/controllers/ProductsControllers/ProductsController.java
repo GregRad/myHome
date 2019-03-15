@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.gregrad.myhome.dto.ProductsDTO;
-import pl.gregrad.myhome.services.Shopping.ProductsService;
+import pl.gregrad.myhome.services.Products.ProductsService;
 
 import java.util.List;
 

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import pl.gregrad.myhome.dto.ProductsDTO;
-import pl.gregrad.myhome.services.Shopping.ProductsService;
+import pl.gregrad.myhome.services.Products.ProductsService;
 
 @Controller
 @RequestMapping("/products")

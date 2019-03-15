@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.gregrad.myhome.dto.ProductsDTO;
-import pl.gregrad.myhome.services.Shopping.AddProductsService;
+import pl.gregrad.myhome.services.Products.AddProductsService;
 
 @Controller
 @RequestMapping("/products")
