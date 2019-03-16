@@ -16,6 +16,13 @@
     Podsumowanie zakupów
     <br>
     <br>
+    <div>
+        <a href="/"> Styczen</a>
+        <a href="/"> Luty</a>
+        <a href="/"> Marzec</a>
+    </div>
+    <br>
+    <br>
     <table border="2px">
         <tr>
             <th>
@@ -60,8 +67,37 @@
         </tr>
 
 </c:forEach>
-
     </table>
+    <br>
+    <table border="2px">
+        <tr>
+            <th>
+                Suma spozywczych
+            </th>
+            <th>
+                Suma gospodarczych
+            </th>
+            <th>
+                Suma kosztow
+            </th>
+        </tr>
+        <tr>
+            <td>
+                ...
+            </td>
+            <td>
+                ...
+            </td>
+            <td>
+                <c:forEach items="${allProducts}" var="products">
+                    <c:set var="total" value="${total + products.price}">
+                    </c:set>
+                </c:forEach>
+                ${total} zl
+            </td>
+        </tr>
+    </table>
+    <br>
     <a href="/"> Strona domowa</a>
 </body>
 </html>

@@ -14,6 +14,15 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    Zuzycie
+    <br>
+    <br>
+    <div>
+        <a href="/"> Styczen</a>
+        <a href="/"> Luty</a>
+        <a href="/"> Marzec</a>
+    </div>
+    <br>
     <br>
     <table border="2px">
         <tr>
@@ -47,6 +56,7 @@
         </tr>
         </c:forEach>
     </table>
+    <br>
     <a href="/"> Strona domowa</a>
 </body>
 </html>
