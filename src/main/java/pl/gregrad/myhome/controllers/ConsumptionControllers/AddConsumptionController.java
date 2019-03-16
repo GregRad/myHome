@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.gregrad.myhome.dto.ConsumptionDTO;
 import pl.gregrad.myhome.services.Consumption.AddConsumptionService;
-import pl.gregrad.myhome.services.Consumption.ConsumptionService;
 
-import java.util.ArrayList;
 
 @Controller
 @RequestMapping("/consumption")
@@ -23,9 +21,8 @@ public class AddConsumptionController {
 
     @GetMapping("/add_Consumption")
     public String showConsumptionForm(Model model) {
-        ArrayList
         model.addAttribute("consumptionForm", new ConsumptionDTO());
-        model.addAttribute("category", )
+
         return "Add_Consumption";
     }
     @PostMapping("/add_Consumption")

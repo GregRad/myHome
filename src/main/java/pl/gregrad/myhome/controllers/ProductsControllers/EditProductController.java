@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 import pl.gregrad.myhome.dto.ProductsDTO;
 import pl.gregrad.myhome.services.Products.ProductsService;
 
+import java.util.ArrayList;
+
 @Controller
 @RequestMapping("/products")
 public class EditProductController {
@@ -17,6 +19,10 @@ public class EditProductController {
     @GetMapping("/edit/{id}")
     public String editProductForm(@PathVariable Long id, Model model) {
         model.addAttribute("editProduct", productsService.findProduct(id));
+        ArrayList<String> categories = new ArrayList<>();
+        categories.add(0, "Spożywcze");
+        categories.add(1, "Gospodarcze");
+        model.addAttribute("editCategory", categories);
         return "Edit_Product";
     }
     @PostMapping("/edit/{id}")
