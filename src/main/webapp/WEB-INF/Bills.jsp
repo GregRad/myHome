@@ -23,7 +23,7 @@ Wszystkie rachunki
             Nazwa
         </th>
         <th>
-            Wartosc
+            Naleznosc
         </th>
         <th>
             Data platnosci
@@ -41,7 +41,7 @@ Wszystkie rachunki
            ${bill.name}
        </td>
         <td>
-            ${bill.value}
+            ${bill.value} zl
         </td>
         <td>
             ${bill.paymentDate}
@@ -55,5 +55,23 @@ Wszystkie rachunki
     </tr>
 </c:forEach>
 </table>
+
+<br>
+<table border="2px">
+    <tr>
+    <th>
+        Suma w miesiacu
+    </th>
+    </tr>
+    <tr>
+        <td>
+            <c:forEach items="${bills}" var="bill">
+               <c:set var="total" value="${total + bill.value}"></c:set>
+            </c:forEach>
+            Suma: ${total} zl
+        </td>
+    </tr>
+</table>
+<a href="/"> Strona domowa</a>
 </body>
 </html>

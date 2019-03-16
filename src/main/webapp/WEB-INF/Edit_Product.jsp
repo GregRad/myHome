@@ -17,6 +17,8 @@
     <form:input path="name" placeholder="Nazwa"/>
     <form:input path="price" placeholder="Cena"/>
     <form:input path="date" placeholder="Data (wzór: DD/MM/YYYY)"/><br/>
+    <form:select path="category" items="${editCategory}">
+    </form:select>
     <input type="submit" value="Zapisz">
 </form:form>
 </body>

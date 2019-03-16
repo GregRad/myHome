@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: radles
@@ -13,8 +14,6 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    Zuzycie
-    <br>
     <br>
     <table border="2px">
         <tr>
@@ -48,5 +47,6 @@
         </tr>
         </c:forEach>
     </table>
+    <a href="/"> Strona domowa</a>
 </body>
 </html>

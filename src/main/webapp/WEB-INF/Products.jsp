@@ -28,6 +28,9 @@
                 Data
             </th>
             <th>
+                Kategoria
+            </th>
+            <th>
                 Edytuj
             </th>
             <th>
@@ -46,6 +49,9 @@
                 ${products.date}
             </td>
             <td>
+                ${products.category}
+            </td>
+            <td>
                 <a href="/products/edit/${products.id}"> Edytuj </a>
             </td>
             <td>
@@ -54,6 +60,8 @@
         </tr>
 
 </c:forEach>
+
     </table>
+    <a href="/"> Strona domowa</a>
 </body>
 </html>
