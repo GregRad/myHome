@@ -47,11 +47,7 @@ public class ProductsService {
         List<ProductsDTO> productsByCategory = new ArrayList<>();
         for (Products p : products) {
             ProductsDTO productCategory = new ProductsDTO();
-            productCategory.setId(p.getId());
-            productCategory.setName(p.getName());
-            productCategory.setDate(p.getDate());
             productCategory.setPrice(p.getPrice());
-            productCategory.setCategory(p.getCategory());
             productsByCategory.add(productCategory);
         }
         return productsByCategory;
