@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.gregrad.myhome.dto.ProductsDTO;
 import pl.gregrad.myhome.services.Products.ProductsService;
@@ -26,10 +27,8 @@ public class ProductsController {
     }
     @GetMapping("/")
     public String category (Model model) {
-        List<ProductsDTO> householdProducts = productsService.findProductByCategory("Gospodarcze");
-        List<ProductsDTO> groceries = productsService.findProductByCategory("Spozywcze");
-        model.addAttribute("households", householdProducts);
-        model.addAttribute("groceries", groceries);
+        List<ProductsDTO> byCategory = productsService.findProductByCategory("Gospodarcze");
+        model.addAttribute("productsByCategory", byCategory);
         return "Products";
     }
 }
