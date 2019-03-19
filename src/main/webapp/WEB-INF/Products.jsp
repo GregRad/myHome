@@ -86,8 +86,8 @@
 
             </td>
             <td>
-                <c:forEach items="${households}" var="house">
-                    <c:set var="totalHouseholds" value="${totalHouseholds + products.price}">
+                <c:forEach items="${productsByCategory}" var="product">
+                    <c:set var="totalByCategory" value="${productsByCategory + product.price}">
                     </c:set>
                 </c:forEach>
                 ${totalHouseholds} zl
