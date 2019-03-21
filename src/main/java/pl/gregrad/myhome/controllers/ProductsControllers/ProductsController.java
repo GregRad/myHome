@@ -27,8 +27,10 @@ public class ProductsController {
     }
     @GetMapping("/")
     public String category (Model model) {
-        List<ProductsDTO> byCategory = productsService.findProductByCategory("Gospodarcze");
-        model.addAttribute("productsByCategory", byCategory);
         return "Products";
+    }
+    @GetMapping("/")
+    public String date (Model model) {
+        return "Products_By_Month";
     }
 }
