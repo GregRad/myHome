@@ -75,8 +75,7 @@
                 <a href="/products/confirm/${products.id}"> Usuń</a>
             </td>
         </tr>
-
-</c:forEach>
+            </c:forEach>
     </table>
     <br>
     <table border="2px">

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: radles
@@ -8,9 +9,40 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-$END$
+<table border="2">
+    <tr>
+        <th>
+            Gospodarcze
+        </th>
+    </tr>
+    <tr>
+    <c:forEach items="${G}" var="gosp">
+        <td>
+        ${gosp.price}
+        </td>
+    </tr>
+      </c:forEach>
+</table>
+<br>
+<table border="2">
+    <tr>
+        <th>
+            Spozywcze
+        </th>
+    </tr>
+    <tr>
+        <c:forEach items="${S}" var="spoz">
+        <td>
+            ${spoz.price}
+        </td>
+    </tr>
+        </c:forEach>
+</table>
+
+
 </body>
 </html>
