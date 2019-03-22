@@ -20,7 +20,7 @@ public class EditProductController {
     public String editProductForm(@PathVariable Long id, Model model) {
         model.addAttribute("editProduct", productsService.findProduct(id));
         ArrayList<String> categories = new ArrayList<>();
-        categories.add(0, "Spożywcze");
+        categories.add(0, "Spozywcze");
         categories.add(1, "Gospodarcze");
         model.addAttribute("editCategory", categories);
         return "Edit_Product";

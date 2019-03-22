@@ -23,7 +23,7 @@ public class AddProductsController {
     public String addProductForm(Model model) {
         model.addAttribute("productForm", new ProductsDTO());
         ArrayList<String> categories = new ArrayList<>();
-        categories.add(0, "Spożywcze");
+        categories.add(0, "Spozywcze");
         categories.add(1, "Gospodarcze");
         model.addAttribute("category", categories );
         return "Add_Product";
