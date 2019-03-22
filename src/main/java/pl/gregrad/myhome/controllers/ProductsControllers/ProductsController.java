@@ -25,12 +25,18 @@ public class ProductsController {
         model.addAttribute("allProducts", products);
         return "Products";
     }
-    @GetMapping("/")
+    @GetMapping("/category")
     public String category (Model model) {
-        return "Products";
+        List<ProductsDTO> productsG = productsService.findProductByCategory("Gospodarcze");
+        List<ProductsDTO> productsS = productsService.findProductByCategory("Spozywcze");
+        model.addAttribute("G", productsG);
+        model.addAttribute("S", productsS);
+        return "Products_By_Category";
     }
-    @GetMapping("/")
-    public String date (Model model) {
+    @GetMapping("/month/{date}")
+    public String date (@PathVariable Integer date, Model model) {
+        List<ProductsDTO> products = productsService.findProductByDate(date);
+        model.addAttribute("productsByDate", products);
         return "Products_By_Month";
     }
 }
