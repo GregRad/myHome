@@ -18,98 +18,20 @@
     <br>
     <br>
     <div>
-        <a href="/"> Styczen</a>
-        <a href="/"> Luty</a>
-        <a href="/"> Marzec</a>
-        <a href="/"> Kwiecień</a>
-        <a href="/"> Maj</a>
-        <a href="/"> Czerwiec</a>
-        <a href="/"> Lipiec</a>
-        <a href="/"> Sierpień</a>
-        <a href="/"> Wrzesień</a>
-        <a href="/"> Październik</a>
-        <a href="/"> Listopad</a>
-        <a href="/"> Grudzień</a>
+        <a href="/products/month/01"> Styczen</a>
+        <a href="/products/month/02"> Luty</a>
+        <a href="/products/month/03"> Marzec</a>
+        <a href="/products/month/04"> Kwiecień</a>
+        <a href="/products/month/05"> Maj</a>
+        <a href="/products/month/06"> Czerwiec</a>
+        <a href="/products/month/07"> Lipiec</a>
+        <a href="/products/month/08"> Sierpień</a>
+        <a href="/products/month/09"> Wrzesień</a>
+        <a href="/products/month/10"> Październik</a>
+        <a href="/products/month/11"> Listopad</a>
+        <a href="/products/month/12"> Grudzień</a>
+        <a href="/products/all_Products">Rocznie</a>
     </div>
-    <br>
-    <br>
-    <table border="2px">
-        <tr>
-            <th>
-                Nazwa
-            </th>
-            <th>
-                Wartość
-            </th>
-            <th>
-                Data
-            </th>
-            <th>
-                Kategoria
-            </th>
-            <th>
-                Edytuj
-            </th>
-            <th>
-                Usuń
-            </th>
-        </tr>
-        <tr>
-            <c:forEach items="${allProducts}" var="products">
-            <td>
-                ${products.name}
-            </td>
-            <td>
-                ${products.price}
-            </td>
-            <td>
-                ${products.date}
-            </td>
-            <td>
-                ${products.category}
-            </td>
-            <td>
-                <a href="/products/edit/${products.id}"> Edytuj </a>
-            </td>
-            <td>
-                <a href="/products/confirm/${products.id}"> Usuń</a>
-            </td>
-        </tr>
-            </c:forEach>
-    </table>
-    <br>
-    <table border="2px">
-        <tr>
-            <th>
-                Suma spozywczych
-            </th>
-            <th>
-                Suma gospodarczych
-            </th>
-            <th>
-                Suma kosztow
-            </th>
-        </tr>
-        <tr>
-            <td>
-
-            </td>
-            <td>
-                <c:forEach items="${productsByCategory}" var="product">
-                    <c:set var="totalByCategory" value="${productsByCategory + product.price}">
-                    </c:set>
-                </c:forEach>
-                ${totalHouseholds} zl
-            </td>
-            <td>
-                <c:forEach items="${allProducts}" var="products">
-                    <c:set var="total" value="${total + products.price}">
-                    </c:set>
-                </c:forEach>
-                ${total} zl
-            </td>
-        </tr>
-    </table>
     <br>
     <a href="/"> Strona domowa</a>
 </body>

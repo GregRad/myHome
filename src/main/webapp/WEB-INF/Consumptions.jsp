@@ -17,13 +17,6 @@
     Zuzycie
     <br>
     <br>
-    <div>
-        <a href="/"> Styczen</a>
-        <a href="/"> Luty</a>
-        <a href="/"> Marzec</a>
-    </div>
-    <br>
-    <br>
     <table border="2px">
         <tr>
             <th>

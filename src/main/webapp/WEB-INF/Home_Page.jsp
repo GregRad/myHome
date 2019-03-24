@@ -27,7 +27,7 @@
     <br>
     <a href="/products/add_Product"> add product</a>
     <br>
-    <a href="/products/all_Products">products list</a>
+    <a href="/products/list">products list</a>
 
 
 </body>
