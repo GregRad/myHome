@@ -19,11 +19,16 @@ public class ProductsController {
     @Autowired
     ProductsService productsService;
 
+    @GetMapping("/list")
+    public String list() {
+        return "Products";
+    }
+
     @GetMapping("/all_Products")
     public String shopping(Model model) {
         List<ProductsDTO> products = productsService.findAllProducts();
         model.addAttribute("allProducts", products);
-        return "Products";
+        return "Products_Summary";
     }
     @GetMapping("/category")
     public String category (Model model) {
