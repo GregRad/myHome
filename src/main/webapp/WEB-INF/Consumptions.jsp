@@ -32,8 +32,9 @@
                 Usun
             </th>
         </tr>
+        <c:forEach items="${consumptions}" var="consumption">
         <tr>
-            <c:forEach items="${consumptions}" var="consumption">
+            
             <td>
                ${consumption.name}
             </td>
@@ -46,8 +47,10 @@
             <td>
                 <a href="/consumption/confirm/delete_consumption/${consumption.id}"> usun</a>
             </td>
+            
         </tr>
         </c:forEach>
+        
     </table>
     <br>
     <a href="/"> Strona domowa</a>

@@ -38,8 +38,9 @@
                 Usun
             </th>
         </tr>
+        <c:forEach items="${bills}" var="bill">
         <tr>
-         <c:forEach items="${bills}" var="bill">
+         
              <td>
                  ${bill.name}
              </td>
@@ -58,6 +59,7 @@
              <td>
                   <a href="/bills/confirm/delete_bill/${bill.id}"> usun </a>
              </td>
+             
          </tr>
          </c:forEach>
     </table>

@@ -37,8 +37,8 @@ Roczne podsumowanie zakupów
             Usuń
         </th>
     </tr>
-    <tr>
-        <c:forEach items="${allProducts}" var="products">
+    <c:forEach items="${allProducts}" var="products">
+    <tr>   
         <td>
                 ${products.name}
         </td>
@@ -59,6 +59,7 @@ Roczne podsumowanie zakupów
         </td>
     </tr>
     </c:forEach>
+    
 </table>
 <br>
 <br>

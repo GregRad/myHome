@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<table border="2">
+<table border="2px">
     <tr>
         <th>
             Gospodarcze
@@ -24,11 +24,12 @@
         <td>
         ${gosp.price}
         </td>
+        </c:forEach>
     </tr>
-      </c:forEach>
+      
 </table>
 <br>
-<table border="2">
+<table border="2px">
     <tr>
         <th>
             Spozywcze
@@ -39,8 +40,9 @@
         <td>
             ${spoz.price}
         </td>
+         </c:forEach>
     </tr>
-        </c:forEach>
+       
 </table>
 
 
