@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.persistence.EntityManagerFactory;
@@ -20,7 +20,7 @@ import javax.persistence.EntityManagerFactory;
 @ComponentScan(basePackages = "pl.gregrad.myhome")
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "pl.gregrad.myhome.repositories")
-public class AppConfig extends WebMvcConfigurerAdapter {
+public class AppConfig implements WebMvcConfigurer {
 
     @Bean
     public ViewResolver viewResolver() {
