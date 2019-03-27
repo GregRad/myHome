@@ -14,4 +14,7 @@ public interface ProductsRepository extends JpaRepository<Products, Long> {
 
     @Query ("SELECT d FROM Products d WHERE MONTH(d.date) = :date")
     List<Products> findProductsByDate (@Param("date") Integer date);
+    
+    @Query ("SELECT c FROM Products c WHERE MONTH(c.date) =:date AND c.category = :category")
+    List<Products> findCategorizeProducts (@Param("date") Integer date, @Param("category") String category);
 }
