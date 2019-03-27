@@ -3,7 +3,6 @@ package pl.gregrad.myhome.entity;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Bills")

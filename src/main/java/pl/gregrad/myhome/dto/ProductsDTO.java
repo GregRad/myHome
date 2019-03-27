@@ -3,7 +3,6 @@ package pl.gregrad.myhome.dto;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 
 public class ProductsDTO {
