@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import pl.gregrad.myhome.dto.ProductsDTO;
 import pl.gregrad.myhome.services.Products.ProductsService;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Controller

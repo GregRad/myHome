@@ -22,7 +22,6 @@ public class AddConsumptionController {
     @GetMapping("/add_Consumption")
     public String showConsumptionForm(Model model) {
         model.addAttribute("consumptionForm", new ConsumptionDTO());
-
         return "Add_Consumption";
     }
     @PostMapping("/add_Consumption")
