@@ -36,8 +36,9 @@
                     Usuń
                 </th>
             </tr>
+            <c:forEach items="${productsByDate}" var="products">
             <tr>
-                <c:forEach items="${productsByDate}" var="products">
+                
                 <td>
                         ${products.name}
                 </td>
@@ -56,14 +57,14 @@
                 <td>
                     <a href="/products/confirm/${products.id}"> Usuń</a>
                 </td>
-                </c:forEach>
             </tr>
+             </c:forEach>
             
     </table>
     <br>
     <br>
-    <table border="2px">
-     <tr>
+<table border="2px">
+    <tr>
         <th>
             Suma spozywczych
         </th>
@@ -76,14 +77,16 @@
     </tr>
     <tr>
         <td>
-        ...
+			<c:forEach items="${allGroceries}" var="groceries">
+				<c:set var="totalGroceries" value="${totalGroceries + groceries.price}"></c:set>
+			</c:forEach>
+			${totalGroceries} zl
         </td>
         <td>
-            <c:forEach items="${productsByCategory}" var="product">
-                <c:set var="totalByCategory" value="${productsByCategory + product.price}">
-                </c:set>
-            </c:forEach>
-            ${totalHouseholds} zl
+			<c:forEach items="${allHouseholds}" var="households">
+				<c:set var="totalHouseholds" value="${totalHouseholds + households.price}"></c:set>
+			</c:forEach>
+			${totalHouseholds} zl
         </td>
         <td>
             <c:forEach items="${productsByDate}" var="products">
@@ -93,7 +96,7 @@
             ${total} zl
         </td>
     </tr>
-    </table>
+</table>
         <br>
         <a href="/"> Strona domowa</a>
         <br>

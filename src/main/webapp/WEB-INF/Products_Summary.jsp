@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-Roczne podsumowanie zakupów
+Podsumowanie zakupów
 <br>
 <br>
 <table border="2px">
@@ -77,12 +77,14 @@ Roczne podsumowanie zakupów
     </tr>
     <tr>
         <td>
-        ...
+        	<c:forEach items="${allGroceries}" var="groceries">
+        		<c:set var="totalGroceries" value="${totalGroceries + groceries.price}"></c:set>
+        	</c:forEach>
+        	${totalGroceries} zl
         </td>
         <td>
-            <c:forEach items="${productsByCategory}" var="product">
-                <c:set var="totalByCategory" value="${productsByCategory + product.price}">
-                </c:set>
+            <c:forEach items="${allHouseholds}" var="households">
+                <c:set var="totalHouseholds" value="${totalHouseholds + households.price}"></c:set>
             </c:forEach>
             ${totalHouseholds} zl
         </td>
