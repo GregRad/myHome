@@ -31,6 +31,6 @@ public class AddProductsController {
     @PostMapping("/add_Product")
     public String addProduct(@ModelAttribute ProductsDTO product) {
         addProductService.addProduct(product);
-        return "redirect:/products/all_Products";
+        return "redirect:/products/list";
     }
 }

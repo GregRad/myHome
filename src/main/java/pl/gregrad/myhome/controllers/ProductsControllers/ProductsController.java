@@ -22,25 +22,24 @@ public class ProductsController {
     public String list() {
         return "Products";
     }
-
     @GetMapping("/all_Products")
     public String shopping(Model model) {
         List<ProductsDTO> products = productsService.findAllProducts();
+        List<ProductsDTO> households = productsService.findProductByCategory("Gospodarcze");
+        List<ProductsDTO> groceries = productsService.findProductByCategory("Spozywcze");
         model.addAttribute("allProducts", products);
+        model.addAttribute("allHouseholds", households);
+        model.addAttribute("allGroceries", groceries);
         return "Products_Summary";
-    }
-    @GetMapping("/category")
-    public String category (Model model) {
-        List<ProductsDTO> productsG = productsService.findProductByCategory("Gospodarcze");
-        List<ProductsDTO> productsS = productsService.findProductByCategory("Spozywcze");
-        model.addAttribute("G", productsG);
-        model.addAttribute("S", productsS);
-        return "Products_By_Category";
     }
     @GetMapping("/month/{date}")
     public String date (@PathVariable Integer date, Model model) {
         List<ProductsDTO> products = productsService.findProductByDate(date);
+        List<ProductsDTO> groceries = productsService.findCategorizedProduct(date, "Gospodarcze");
+        List<ProductsDTO> households = productsService.findCategorizedProduct(date, "Spozywcze");
         model.addAttribute("productsByDate", products);
+        model.addAttribute("allGroceries", groceries);
+        model.addAttribute("allHouseholds", households);
         return "Products_By_Month";
     }
 }
