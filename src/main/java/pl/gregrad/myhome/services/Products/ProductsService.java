@@ -66,6 +66,19 @@ public class ProductsService {
         }
         return productsByDate;
     }
+    public List<ProductsDTO> findCategorizedProduct(Integer date, String category) {
+    	List <Products> products = productsRepository.findCategorizeProducts(date, category);
+    	List <ProductsDTO> findCategorizedProducts = new ArrayList<ProductsDTO>();
+    	for (Products p : products) {
+    		ProductsDTO categorizedProducts = new ProductsDTO();
+    		categorizedProducts.setCategory(p.getCategory());
+    		categorizedProducts.setName(p.getName());
+    		categorizedProducts.setPrice(p.getPrice());
+    		categorizedProducts.setId(p.getId());
+    		findCategorizedProducts.add(categorizedProducts);
+    	}
+    	return findCategorizedProducts;
+    }
 
     public void delete(Long id) {
         productsRepository.delete(productsRepository.findOne(id));
