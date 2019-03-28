@@ -52,8 +52,8 @@ public class ProductsService {
         }
         return productsByCategory;
     }
-    public List<ProductsDTO> findProductByDate(Integer date) {
-        List<Products> products = productsRepository.findProductsByDate(date);
+    public List<ProductsDTO> findProductByDate(Integer month) {
+        List<Products> products = productsRepository.findProductsByDate(month);
         List<ProductsDTO> productsByDate = new ArrayList<>();
         for (Products p : products) {
             ProductsDTO productsDate = new ProductsDTO();
@@ -66,8 +66,8 @@ public class ProductsService {
         }
         return productsByDate;
     }
-    public List<ProductsDTO> findCategorizedProduct(Integer date, String category) {
-    	List <Products> products = productsRepository.findCategorizeProducts(date, category);
+    public List<ProductsDTO> findCategorizedProduct(Integer year, Integer month, String category) {
+    	List <Products> products = productsRepository.findCategorizeProducts(year, month, category);
     	List <ProductsDTO> findCategorizedProducts = new ArrayList<ProductsDTO>();
     	for (Products p : products) {
     		ProductsDTO categorizedProducts = new ProductsDTO();

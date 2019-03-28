@@ -32,11 +32,13 @@ public class ProductsController {
         model.addAttribute("allGroceries", groceries);
         return "Products_Summary";
     }
-    @GetMapping("/month/{date}")
-    public String date (@PathVariable Integer date, Model model) {
-        List<ProductsDTO> products = productsService.findProductByDate(date);
-        List<ProductsDTO> groceries = productsService.findCategorizedProduct(date, "Gospodarcze");
-        List<ProductsDTO> households = productsService.findCategorizedProduct(date, "Spozywcze");
+    @GetMapping("/month/{year}/{month}")
+    public String date (@PathVariable Integer month,
+    					@PathVariable Integer year, 
+    					Model model) {
+        List<ProductsDTO> products = productsService.findProductByDate(month);
+        List<ProductsDTO> groceries = productsService.findCategorizedProduct(year, month, "Gospodarcze");
+        List<ProductsDTO> households = productsService.findCategorizedProduct(year, month, "Spozywcze");
         model.addAttribute("productsByDate", products);
         model.addAttribute("allGroceries", groceries);
         model.addAttribute("allHouseholds", households);
