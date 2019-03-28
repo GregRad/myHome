@@ -29,9 +29,6 @@
                 Data platnosci
             </th>
             <th>
-                Zaplacony
-            </th>
-            <th>
                 Edytuj
             </th>
             <th>
@@ -51,9 +48,6 @@
                  ${bill.paymentDate}
              </td>
              <td>
-                 x
-             </td>
-             <td>
                   <a href="/bills/edit/${bill.id}"> edytuj </a>
              </td>
              <td>
@@ -67,22 +61,10 @@
     <table border="2px">
       <tr>
           <th>
-            Zaplacone
-          </th>
-          <th>
-            Do zaplaty
-          </th>
-          <th>
             Suma w miesiacu
           </th>
       </tr>
       <tr>
-          <td>
-            ...
-          </td>
-          <td>
-            ...
-          </td>
           <td>
             <c:forEach items="${bills}" var="bill">
                <c:set var="total" value="${total + bill.value}"></c:set>

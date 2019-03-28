@@ -71,7 +71,7 @@
         <th>
             Suma gospodarczych
         </th>
-        <th>
+        <th>a
             Suma kosztow
         </th>
     </tr>

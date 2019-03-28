@@ -18,6 +18,10 @@
     <br>
     <br>
     <div>
+    	<a href="/products/year/2019">2019</a>
+    </div>
+    <br>
+    <div>
         <a href="/products/month/01"> Styczen</a>
         <a href="/products/month/02"> Luty</a>
         <a href="/products/month/03"> Marzec</a>
