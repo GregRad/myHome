@@ -14,7 +14,7 @@ import javax.transaction.Transactional;
 public class AddProductsService {
 
     @Autowired
-    ProductsRepository shoppingRepository;
+    ProductsRepository productsRepository;
 
     public void addProduct(ProductsDTO productForm) {
         Products product = new Products();
@@ -22,7 +22,7 @@ public class AddProductsService {
         product.setPrice(productForm.getPrice());
         product.setDate(productForm.getDate());
         product.setCategory(productForm.getCategory());
-        shoppingRepository.save(product);
+        productsRepository.save(product);
     }
 
 }
