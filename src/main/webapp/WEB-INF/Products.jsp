@@ -18,7 +18,13 @@
     <br>
     <br>
     <div>
-    	<a href="/products/year/2019">2019</a>
+    	<select name="links" onchange="window.location.href=this.value;">
+    		
+    			<option value="www.google.pl">Google</option>
+    	
+    	</select>
+    	<input type="submit" value="OK">
+    	
     </div>
     <br>
     <div>
