@@ -10,6 +10,7 @@ import pl.gregrad.myhome.dto.ProductsDTO;
 import pl.gregrad.myhome.entity.Products;
 import pl.gregrad.myhome.services.Products.ProductsService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -20,7 +21,13 @@ public class ProductsController {
     ProductsService productsService;
 
     @GetMapping("/list")
-    public String list() {
+    public String list(Model model) {
+    	int currentYear = 2019;
+    	Integer[] years = new Integer[101];
+    	for (int i = 0; i < years.length; i++ ) {
+    		years[i] = currentYear++;
+    	}
+    	model.addAttribute("numbers", years);
         return "Products";
     }
     @GetMapping("/all_Products")
@@ -33,14 +40,14 @@ public class ProductsController {
         model.addAttribute("allGroceries", groceries);
         return "Products_Summary";
     }
-//    @GetMapping("/{year}")
-//    public String productsByYear(@PathVariable Integer year, 
-//    							 Model model) {
-//    	List<ProductsDTO> products = productsService.findProductsByYear(year);
-//    	model.addAttribute("productsByYear", products);
-//    	return "Products"; 
-//    	
-//    }
+    @GetMapping("/{date}")
+    public String productsByYear(@PathVariable Integer date, 
+    							 Model model) {
+    	List<ProductsDTO> products = productsService.findProductsByYear(date);
+    	model.addAttribute("productsByYear", products);
+    	return "ByYearTest"; 
+    	
+    }
     
     @GetMapping("/monthly/{date}")
     public String date (@PathVariable Integer date,

@@ -66,19 +66,19 @@ public class ProductsService {
         }
         return productsByDate;
     }
-//    public List<ProductsDTO> findProductsByYear (Integer year) {
-//    	List<Products> products = productsRepository.findProductsByYear(year);
-//    	List<ProductsDTO> productsByYear = new ArrayList<>();
-//    	for(Products p : products) {
-//    	ProductsDTO productsYear = new ProductsDTO();
-//    	productsYear.setName(p.getName());
-//    	productsYear.setDate(p.getDate());
-//    	productsYear.setPrice(p.getPrice());
-//    	productsYear.setCategory(p.getCategory());
-//    	productsByYear.add(productsYear);
-//    	}
-//    	return productsByYear;
-//    }
+    public List<ProductsDTO> findProductsByYear (Integer date) {
+    	List<Products> products = productsRepository.findProductsByYear(date);
+    	List<ProductsDTO> productsByYear = new ArrayList<>();
+    	for(Products p : products) {
+    	ProductsDTO productsYear = new ProductsDTO();
+    	productsYear.setName(p.getName());
+    	productsYear.setDate(p.getDate());
+    	productsYear.setPrice(p.getPrice());
+    	productsYear.setCategory(p.getCategory());
+    	productsByYear.add(productsYear);
+    	}
+    	return productsByYear;
+    }
     
     public List<ProductsDTO> findCategorizedProduct(Integer date, String category) {
     	List <Products> products = productsRepository.findCategorizeProducts(date, category);
