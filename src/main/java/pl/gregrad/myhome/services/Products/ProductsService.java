@@ -80,8 +80,8 @@ public class ProductsService {
     	return productsByYear;
     }
     
-    public List<ProductsDTO> findCategorizedProduct(Integer date, String category) {
-    	List <Products> products = productsRepository.findCategorizeProducts(date, category);
+    public List<ProductsDTO> findCategorizedProduct(Integer year, Integer date, String category) {
+    	List <Products> products = productsRepository.findCategorizeProducts(year, date, category);
     	List <ProductsDTO> findCategorizedProducts = new ArrayList<ProductsDTO>();
     	for (Products p : products) {
     		ProductsDTO categorizedProducts = new ProductsDTO();
