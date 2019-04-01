@@ -10,6 +10,7 @@ import pl.gregrad.myhome.dto.ProductsDTO;
 
 import pl.gregrad.myhome.services.Products.ProductsService;
 
+import java.time.Year;
 import java.util.List;
 
 @Controller
@@ -39,12 +40,13 @@ public class ProductsController {
         model.addAttribute("allGroceries", groceries);
         return "Products_Summary";
     }
-    @GetMapping("year/{date}")
+    @GetMapping("{year}/{date}")
     public String productsByYear(@PathVariable Integer date, 
+    							 @PathVariable Integer year,
     							 Model model) {
     	List<ProductsDTO> products = productsService.findProductsByYear(date);
-        List<ProductsDTO> groceries = productsService.findCategorizedProduct(date, "Gospodarcze");
-        List<ProductsDTO> households = productsService.findCategorizedProduct(date, "Spozywcze");
+        List<ProductsDTO> groceries = productsService.findCategorizedProduct(year, date, "Gospodarcze");
+        List<ProductsDTO> households = productsService.findCategorizedProduct(year, date, "Spozywcze");
         model.addAttribute("allGroceries", groceries);
         model.addAttribute("allHouseholds", households);
     	model.addAttribute("productsByYear", products);
@@ -54,10 +56,11 @@ public class ProductsController {
     
     @GetMapping("/monthly/{date}")
     public String date (@PathVariable Integer date,
+    					@PathVariable Integer year,
     					Model model) {
         List<ProductsDTO> products = productsService.findProductByDate(date);
-        List<ProductsDTO> groceries = productsService.findCategorizedProduct(date, "Gospodarcze");
-        List<ProductsDTO> households = productsService.findCategorizedProduct(date, "Spozywcze");
+        List<ProductsDTO> groceries = productsService.findCategorizedProduct(year, date, "Gospodarcze");
+        List<ProductsDTO> households = productsService.findCategorizedProduct(year, date, "Spozywcze");
         model.addAttribute("productsByDate", products);
         model.addAttribute("allGroceries", groceries);
         model.addAttribute("allHouseholds", households);
