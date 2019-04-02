@@ -52,8 +52,8 @@ public class ProductsService {
         }
         return productsByCategory;
     }
-    public List<ProductsDTO> findProductByDate(Integer year, Integer month) {
-        List<Products> products = productsRepository.findProductsByDate(year, month);
+    public List<ProductsDTO> findProductByDate(Integer month, Integer year) {
+        List<Products> products = productsRepository.findProductsByDate(month, year);
         List<ProductsDTO> productsByDate = new ArrayList<>();
         for (Products p : products) {
             ProductsDTO productsDate = new ProductsDTO();
@@ -66,33 +66,33 @@ public class ProductsService {
         }
         return productsByDate;
     }
-//    public List<ProductsDTO> findProductsByYear (Integer date) {
-//    	List<Products> products = productsRepository.findProductsByYear(date);
-//    	List<ProductsDTO> productsByYear = new ArrayList<>();
-//    	for(Products p : products) {
-//    	ProductsDTO productsYear = new ProductsDTO();
-//    	productsYear.setName(p.getName());
-//    	productsYear.setDate(p.getDate());
-//    	productsYear.setPrice(p.getPrice());
-//    	productsYear.setCategory(p.getCategory());
-//    	productsByYear.add(productsYear);
-//    	}
-//    	return productsByYear;
-//    }
-    
-    public List<ProductsDTO> findCategorizedProduct(Integer year, Integer month, String category) {
-    	List <Products> products = productsRepository.findCategorizeProducts(year, month, category);
-    	List <ProductsDTO> findCategorizedProducts = new ArrayList<ProductsDTO>();
-    	for (Products p : products) {
-    		ProductsDTO categorizedProducts = new ProductsDTO();
-    		categorizedProducts.setCategory(p.getCategory());
-    		categorizedProducts.setName(p.getName());
-    		categorizedProducts.setPrice(p.getPrice());
-    		categorizedProducts.setId(p.getId());
-    		findCategorizedProducts.add(categorizedProducts);
+    public List<ProductsDTO> findProductsByYear (Integer year) {
+    	List<Products> products = productsRepository.findProductsByYear(year);
+    	List<ProductsDTO> productsByYear = new ArrayList<>();
+    	for(Products p : products) {
+    	ProductsDTO productsYear = new ProductsDTO();
+    	productsYear.setName(p.getName());
+    	productsYear.setDate(p.getDate());
+    	productsYear.setPrice(p.getPrice());
+    	productsYear.setCategory(p.getCategory());
+    	productsByYear.add(productsYear);
     	}
-    	return findCategorizedProducts;
+    	return productsByYear;
     }
+    
+//    public List<ProductsDTO> findCategorizedProduct(Integer year, Integer month, String category) {
+//    	List <Products> products = productsRepository.findCategorizeProducts(year, month, category);
+//    	List <ProductsDTO> findCategorizedProducts = new ArrayList<ProductsDTO>();
+//    	for (Products p : products) {
+//    		ProductsDTO categorizedProducts = new ProductsDTO();
+//    		categorizedProducts.setCategory(p.getCategory());
+//    		categorizedProducts.setName(p.getName());
+//    		categorizedProducts.setPrice(p.getPrice());
+//    		categorizedProducts.setId(p.getId());
+//    		findCategorizedProducts.add(categorizedProducts);
+//    	}
+//    	return findCategorizedProducts;
+//    }
 
     public void delete(Long id) {
         productsRepository.delete(productsRepository.findOne(id));

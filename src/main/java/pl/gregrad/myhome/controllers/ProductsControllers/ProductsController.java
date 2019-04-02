@@ -40,6 +40,22 @@ public class ProductsController {
         model.addAttribute("allGroceries", groceries);
         return "Products_Summary";
     }
+    @GetMapping("list/{year}")
+    public String productsByYear(@PathVariable Integer year,
+    							  Model model) {
+    	List<ProductsDTO> products = productsService.findProductsByYear(year);
+    	model.addAttribute("productsByYear", products);
+    	return "Products_By_Year";
+    }
+    @GetMapping("/{year}/{month}") 
+    public String productsByDate(@PathVariable Integer year,
+    							  @PathVariable Integer month,
+    							  Model model) {
+    	List<ProductsDTO> products = productsService.findProductByDate(year, month);
+    	model.addAttribute("productByDate", products);
+    	return "Products_By_Month";
+    }
+    
 //    @GetMapping("{year}/{date}")
 //    public String productsByYear(@PathVariable Integer date, 
 //    							 @PathVariable Integer year,
@@ -53,16 +69,16 @@ public class ProductsController {
 //    	return "ByYearTest"; 
 //    	
 //    }
-    @GetMapping("/{year}/{month}")
-    public String date (@PathVariable Integer year,
-    					@PathVariable Integer month,
-    					Model model) {
-        List<ProductsDTO> products = productsService.findProductByDate(year, month);
-        List<ProductsDTO> groceries = productsService.findCategorizedProduct(year, month, "Gospodarcze");
-        List<ProductsDTO> households = productsService.findCategorizedProduct(year, month, "Spozywcze");
-        model.addAttribute("productsByDate", products);
-        model.addAttribute("allGroceries", groceries);
-        model.addAttribute("allHouseholds", households);
-        return "Products_By_Month";
-    }
+//    @GetMapping("/{year}/{month}")
+//    public String date (@PathVariable Integer year,
+//    					@PathVariable Integer month,
+//    					Model model) {
+//        List<ProductsDTO> products = productsService.findProductByDate(year, month);
+//        List<ProductsDTO> groceries = productsService.findCategorizedProduct(year, month, "Gospodarcze");
+//        List<ProductsDTO> households = productsService.findCategorizedProduct(year, month, "Spozywcze");
+//        model.addAttribute("productsByDate", products);
+//        model.addAttribute("allGroceries", groceries);
+//        model.addAttribute("allHouseholds", households);
+//        return "Products_By_Month";
+//    }
 }
