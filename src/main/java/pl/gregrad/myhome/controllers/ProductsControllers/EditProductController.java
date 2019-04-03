@@ -28,6 +28,6 @@ public class EditProductController {
     @PostMapping("/edit/{id}")
     public String editProduct(@ModelAttribute ProductsDTO editProduct) {
         productsService.edit(editProduct);
-        return "redirect:/products/all_Products";
+        return "redirect:/products/list";
     }
 }

@@ -14,7 +14,7 @@
 <body>
         Potwierdzasz usuniecie produktu ${product.name} ${product.price} ?
         <a href="/products/delete/${product.id}" > Tak </a>
-        <a href="/products/all_Products" > Nie </a>
+        <a href="/products/list" > Nie </a>
 
 </body>
 </html>

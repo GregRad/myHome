@@ -10,7 +10,6 @@ import pl.gregrad.myhome.dto.ProductsDTO;
 
 import pl.gregrad.myhome.services.Products.ProductsService;
 
-import java.time.Year;
 import java.util.List;
 
 @Controller
@@ -22,12 +21,12 @@ public class ProductsController {
 
     @GetMapping("/list")
     public String list(Model model) {
-    	int currentYear = 2019;
-    	Integer[] years = new Integer[101];
-    	for (int i = 0; i < years.length; i++ ) {
-    		years[i] = currentYear++;
-    	}
-    	model.addAttribute("numbers", years);
+//    	int currentYear = 2019;
+//    	Integer[] years = new Integer[101];
+//    	for (int i = 0; i < years.length; i++ ) {
+//    		years[i] = currentYear++;
+//    	}
+//    	model.addAttribute("numbers", years);
         return "Products";
     }
     @GetMapping("/all_Products")
@@ -40,35 +39,36 @@ public class ProductsController {
         model.addAttribute("allGroceries", groceries);
         return "Products_Summary";
     }
+    @GetMapping("/{year}")
+    public String allProductsByYear(@PathVariable Integer year,
+    							   Model model) {
+    	List<ProductsDTO> products = productsService.findProductsByYear(year);
+    	model.addAttribute("allProductsByYear", products);
+    	return "Products_By_Year";
+    }
     @GetMapping("list/{year}")
     public String productsByYear(@PathVariable Integer year,
-    							  Model model) {
+    							 Model model) {
     	List<ProductsDTO> products = productsService.findProductsByYear(year);
+        List<ProductsDTO> households = productsService.findCategorizedProductByYear(year, "Gospodarcze");
+        List<ProductsDTO> groceries = productsService.findCategorizedProductByYear(year, "Spozywcze");
     	model.addAttribute("productsByYear", products);
-    	return "Products_By_Year";
+        model.addAttribute("allGroceries", groceries);
+        model.addAttribute("allHouseholds", households);
+    	return "Products_Summary";
     }
     @GetMapping("/{year}/{month}") 
     public String productsByDate(@PathVariable Integer year,
     							  @PathVariable Integer month,
     							  Model model) {
     	List<ProductsDTO> products = productsService.findProductByDate(year, month);
-    	model.addAttribute("productByDate", products);
+        List<ProductsDTO> households = productsService.findCategorizedProductByDate(year, month, "Gospodarcze");
+        List<ProductsDTO> groceries = productsService.findCategorizedProductByDate(year, month, "Spozywcze");
+        model.addAttribute("allHouseholds", households);
+        model.addAttribute("allGroceries", groceries);
+    	model.addAttribute("productsByDate", products);
     	return "Products_By_Month";
     }
-    
-//    @GetMapping("{year}/{date}")
-//    public String productsByYear(@PathVariable Integer date, 
-//    							 @PathVariable Integer year,
-//    							 Model model) {
-//    	List<ProductsDTO> products = productsService.findProductsByYear(date);
-//        List<ProductsDTO> groceries = productsService.findCategorizedProduct(year, date, "Gospodarcze");
-//        List<ProductsDTO> households = productsService.findCategorizedProduct(year, date, "Spozywcze");
-//        model.addAttribute("allGroceries", groceries);
-//        model.addAttribute("allHouseholds", households);
-//    	model.addAttribute("productsByYear", products);
-//    	return "ByYearTest"; 
-//    	
-//    }
 //    @GetMapping("/{year}/{month}")
 //    public String date (@PathVariable Integer year,
 //    					@PathVariable Integer month,

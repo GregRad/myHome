@@ -80,19 +80,32 @@ public class ProductsService {
     	return productsByYear;
     }
     
-//    public List<ProductsDTO> findCategorizedProduct(Integer year, Integer month, String category) {
-//    	List <Products> products = productsRepository.findCategorizeProducts(year, month, category);
-//    	List <ProductsDTO> findCategorizedProducts = new ArrayList<ProductsDTO>();
-//    	for (Products p : products) {
-//    		ProductsDTO categorizedProducts = new ProductsDTO();
-//    		categorizedProducts.setCategory(p.getCategory());
-//    		categorizedProducts.setName(p.getName());
-//    		categorizedProducts.setPrice(p.getPrice());
-//    		categorizedProducts.setId(p.getId());
-//    		findCategorizedProducts.add(categorizedProducts);
-//    	}
-//    	return findCategorizedProducts;
-//    }
+    public List<ProductsDTO> findCategorizedProductByDate(Integer year, Integer month, String category) {
+    	List <Products> products = productsRepository.findCategorizeProductsByDate(year, month, category);
+    	List <ProductsDTO> findCategorizedProducts = new ArrayList<ProductsDTO>();
+    	for (Products p : products) {
+    		ProductsDTO categorizedProducts = new ProductsDTO();
+    		categorizedProducts.setCategory(p.getCategory());
+    		categorizedProducts.setName(p.getName());
+    		categorizedProducts.setPrice(p.getPrice());
+    		categorizedProducts.setId(p.getId());
+    		findCategorizedProducts.add(categorizedProducts);
+    	}
+    	return findCategorizedProducts;
+    }
+    public List<ProductsDTO> findCategorizedProductByYear(Integer year, String category) {
+    	List <Products> products = productsRepository.findCategorizeProductsByYear(year, category);
+    	List <ProductsDTO> findCategorizedProducts = new ArrayList<ProductsDTO>();
+    	for (Products p : products) {
+    		ProductsDTO categorizedProducts = new ProductsDTO();
+    		categorizedProducts.setCategory(p.getCategory());
+    		categorizedProducts.setName(p.getName());
+    		categorizedProducts.setPrice(p.getPrice());
+    		categorizedProducts.setId(p.getId());
+    		findCategorizedProducts.add(categorizedProducts);
+    	}
+    	return findCategorizedProducts;
+    }
 
     public void delete(Long id) {
         productsRepository.delete(productsRepository.findOne(id));

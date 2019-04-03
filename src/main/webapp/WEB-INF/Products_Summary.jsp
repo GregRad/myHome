@@ -1,105 +1,27 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: radles
-  Date: 24.03.19
-  Time: 11:58
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Title</title>
-    <link rel="stylesheet" href="/css/style.css">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-Podsumowanie zakupów
-<br>
-<br>
-<table border="2px">
-    <tr>
-        <th>
-            Nazwa
-        </th>
-        <th>
-            Wartość
-        </th>
-        <th>
-            Data
-        </th>
-        <th>
-            Kategoria
-        </th>
-        <th>
-            Edytuj
-        </th>
-        <th>
-            Usuń
-        </th>
-    </tr>
-    <c:forEach items="${allProducts}" var="products">
-    <tr>   
-        <td>
-                ${products.name}
-        </td>
-        <td>
-                ${products.price}
-        </td>
-        <td>
-                ${products.date}
-        </td>
-        <td>
-                ${products.category}
-        </td>
-        <td>
-            <a href="/products/edit/${products.id}"> Edytuj </a>
-        </td>
-        <td>
-            <a href="/products/confirm/${products.id}"> Usuń</a>
-        </td>
-    </tr>
-    </c:forEach>
-    
-</table>
-<br>
-<br>
-<table border="2px">
-    <tr>
-        <th>
-            Suma spozywczych
-        </th>
-        <th>
-            Suma gospodarczych
-        </th>
-        <th>
-            Suma kosztow
-        </th>
-    </tr>
-    <tr>
-        <td>
-        	<c:forEach items="${allGroceries}" var="groceries">
-        		<c:set var="totalGroceries" value="${totalGroceries + groceries.price}"></c:set>
-        	</c:forEach>
-        	${totalGroceries} zl
-        </td>
-        <td>
-            <c:forEach items="${allHouseholds}" var="households">
-                <c:set var="totalHouseholds" value="${totalHouseholds + households.price}"></c:set>
-            </c:forEach>
-            ${totalHouseholds} zl
-        </td>
-        <td>
-            <c:forEach items="${allProducts}" var="products">
-                <c:set var="total" value="${total + products.price}">
-                </c:set>
-            </c:forEach>
-            ${total} zl
-        </td>
-    </tr>
-</table>
-<br>
-<a href="/"> Strona domowa</a>
-<br>
-<a href="/products/list">Cofnij</a>
+<div>
+        <a href="/products/${year}/01"> Styczen</a>
+        <a href="/products/${year}/02"> Luty</a>
+        <a href="/products/${year}/03"> Marzec</a>
+        <a href="/products/${year}/04"> Kwiecień</a>
+        <a href="/products/${year}/05"> Maj</a>
+        <a href="/products/${year}/06"> Czerwiec</a>
+        <a href="/products/${year}/07"> Lipiec</a>
+        <a href="/products/${year}/08"> Sierpień</a>
+        <a href="/products/${year}/09"> Wrzesień</a>
+        <a href="/products/${year}/10"> Październik</a>
+        <a href="/products/${year}/11"> Listopad</a>
+        <a href="/products/${year}/12"> Grudzień</a>
+        <a href="/products/${year}">Rocznie</a>
+    </div>
 </body>
 </html>

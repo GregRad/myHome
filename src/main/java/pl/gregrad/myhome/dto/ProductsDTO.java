@@ -52,4 +52,11 @@ public class ProductsDTO {
     public void setCategory(String category) {
         this.category = category;
     }
+
+	@Override
+	public String toString() {
+		return "ProductsDTO [id=" + id + ", name=" + name + ", price=" + price + ", date=" + date + ", category="
+				+ category + "]";
+	}
 }
+
