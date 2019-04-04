@@ -20,6 +20,8 @@ public class AddConsumptionService {
         Consumption consumption = new Consumption();
         consumption.setName(consumptionForm.getName());
         consumption.setValue(consumptionForm.getValue());
+        consumption.setType(consumptionForm.getType());
+        consumption.setDate(consumptionForm.getDate());
         consumptionRepository.save(consumption);
 
     }
