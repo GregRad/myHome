@@ -17,6 +17,9 @@
     <form:form method="post" modelAttribute="consumptionForm">
     <form:input path="name" placeholder="Nazwa"/>
     <form:input path="value" placeholder="Wartosc"/>
+     <form:input path="date" placeholder="Data (wzór: DD/MM/YYYY)"/><br/>
+     <form:select path="type" items="${type}">
+    </form:select>
     <input type="submit" value="Zapisz">
     </form:form>
 </body>

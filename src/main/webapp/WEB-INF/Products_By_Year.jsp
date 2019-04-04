@@ -89,7 +89,7 @@ Podsumowanie zakupów
             ${totalHouseholds} zl
         </td>
         <td>
-            <c:forEach items="${allProducts}" var="products">
+            <c:forEach items="${allProductsByYear}" var="products">
                 <c:set var="total" value="${total + products.price}">
                 </c:set>
             </c:forEach>
