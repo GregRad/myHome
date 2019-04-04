@@ -11,6 +11,7 @@ import pl.gregrad.myhome.dto.ProductsDTO;
 import pl.gregrad.myhome.services.Products.AddProductsService;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("/products")
@@ -22,7 +23,7 @@ public class AddProductsController {
     @GetMapping("/add_Product")
     public String addProductForm(Model model) {
         model.addAttribute("productForm", new ProductsDTO());
-        ArrayList<String> categories = new ArrayList<>();
+        List<String> categories = new ArrayList<String>();
         categories.add(0, "Spozywcze");
         categories.add(1, "Gospodarcze");
         model.addAttribute("category", categories );
