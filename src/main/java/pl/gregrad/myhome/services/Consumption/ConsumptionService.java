@@ -39,6 +39,8 @@ public class ConsumptionService {
         findConsumption.setId(consumption.getId());
         findConsumption.setName(consumption.getName());
         findConsumption.setValue(consumption.getValue());
+        findConsumption.setDate(consumption.getDate());
+        findConsumption.setType(consumption.getType());
         return findConsumption;
     }
     public List<ConsumptionDTO> findConsumptionByType (String type) {
