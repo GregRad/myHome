@@ -24,5 +24,6 @@ public class ConsumptionController {
         model.addAttribute("consumptions", allConsumptions);
         return "Consumptions";
     }
+  
 
 }
