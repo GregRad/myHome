@@ -26,6 +26,13 @@
                 Wartosc
             </th>
             <th>
+            	Data
+            </th>
+            <th>
+            	Typ
+            </th>
+            
+            <th>
                 Edytuj
             </th>
             <th>
@@ -40,6 +47,12 @@
             </td>
             <td>
                 ${consumption.value}
+            </td>
+            <td>
+            	${consumption.date}
+            </td>
+            <td>
+            	${consumption.type}
             </td>
             <td>
                 <a href="/consumption/edit/${consumption.id}"> edytuj </a>
