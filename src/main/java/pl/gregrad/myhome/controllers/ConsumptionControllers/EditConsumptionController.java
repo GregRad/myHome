@@ -1,5 +1,8 @@
 package pl.gregrad.myhome.controllers.ConsumptionControllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +19,12 @@ public class EditConsumptionController {
 
     @GetMapping("/edit/{id}")
     public String editConsumptionForm(@PathVariable Long id, Model model) {
-        model.addAttribute("editConsumption", consumptionService.findConsumption(id));
+    	model.addAttribute("editConsumption", consumptionService.findConsumption(id));
+        List<String> type = new ArrayList<>();
+        type.add(0, "Zimna woda");
+        type.add(1, "Ciepla woda");
+        type.add(2, "Prad");
+        model.addAttribute("editType", type);
         return "Edit_Consumption";
     }
     @PostMapping("/edit/{id}")

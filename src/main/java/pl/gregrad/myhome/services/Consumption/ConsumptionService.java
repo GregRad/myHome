@@ -28,6 +28,8 @@ public class ConsumptionService {
             allConsumptions.setId(c.getId());
             allConsumptions.setName(c.getName());
             allConsumptions.setValue(c.getValue());
+            allConsumptions.setType(c.getType());
+            allConsumptions.setDate(c.getDate());
             consumptionList.add(allConsumptions);
         }
         return consumptionList;
@@ -122,6 +124,8 @@ public class ConsumptionService {
         Consumption editConsumption = consumptionRepository.findOne(consumption.getId());
         editConsumption.setName(consumption.getName());
         editConsumption.setValue(consumption.getValue());
+        editConsumption.setDate(consumption.getDate());
+        editConsumption.setType(consumption.getType());
         consumptionRepository.save(editConsumption);
     }
 }
