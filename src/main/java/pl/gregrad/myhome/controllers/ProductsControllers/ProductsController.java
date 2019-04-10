@@ -20,7 +20,7 @@ public class ProductsController {
     ProductsService productsService;
 
     @GetMapping("/list")
-    public String list(Model model) {
+    public String list() {
 //    	int currentYear = 2019;
 //    	Integer[] years = new Integer[101];
 //    	for (int i = 0; i < years.length; i++ ) {
