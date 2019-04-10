@@ -14,57 +14,17 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    Zuzycie
+        Podsumowanie zuzycia
     <br>
     <br>
-    <table border="2px">
-        <tr>
-            <th>
-                Nazwa
-            </th>
-            <th>
-                Wartosc
-            </th>
-            <th>
-            	Data
-            </th>
-            <th>
-            	Typ
-            </th>
-            
-            <th>
-                Edytuj
-            </th>
-            <th>
-                Usun
-            </th>
-        </tr>
-        <c:forEach items="${consumptions}" var="consumption">
-        <tr>
-            
-            <td>
-               ${consumption.name}
-            </td>
-            <td>
-                ${consumption.value}
-            </td>
-            <td>
-            	${consumption.date}
-            </td>
-            <td>
-            	${consumption.type}
-            </td>
-            <td>
-                <a href="/consumption/edit/${consumption.id}"> edytuj </a>
-            </td>
-            <td>
-                <a href="/consumption/confirm/delete_consumption/${consumption.id}"> usun</a>
-            </td>
-            
-        </tr>
-        </c:forEach>
-        
-    </table>
+    <div>
+    	<a href="list/2019">2019</a>
+    	<br>
+    	<a href="list/2100">2100</a>
+    	<br>
+    	<a href="list/2109">2109</a>
+    </div>
+    <br>
     <br>
     <a href="/"> Strona domowa</a>
 </body>
