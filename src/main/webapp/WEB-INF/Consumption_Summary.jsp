@@ -8,19 +8,19 @@
 </head>
 <body>
 <div>
-        <a href="/products/${year}/01"> Styczen</a>
-        <a href="/products/${year}/02"> Luty</a>
-        <a href="/products/${year}/03"> Marzec</a>
-        <a href="/products/${year}/04"> Kwiecień</a>
-        <a href="/products/${year}/05"> Maj</a>
-        <a href="/products/${year}/06"> Czerwiec</a>
-        <a href="/products/${year}/07"> Lipiec</a>
-        <a href="/products/${year}/08"> Sierpień</a>
-        <a href="/products/${year}/09"> Wrzesień</a>
-        <a href="/products/${year}/10"> Październik</a>
-        <a href="/products/${year}/11"> Listopad</a>
-        <a href="/products/${year}/12"> Grudzień</a>
-        <a href="/products/${year}">Rocznie</a>
+        <a href="/consumption/${year}/01"> Styczen</a>
+        <a href="/consumption/${year}/02"> Luty</a>
+        <a href="/consumption/${year}/03"> Marzec</a>
+        <a href="/consumption/${year}/04"> Kwiecień</a>
+        <a href="/consumption/${year}/05"> Maj</a>
+        <a href="/consumption/${year}/06"> Czerwiec</a>
+        <a href="/consumption/${year}/07"> Lipiec</a>
+        <a href="/consumption/${year}/08"> Sierpień</a>
+        <a href="/consumption/${year}/09"> Wrzesień</a>
+        <a href="/consumption/${year}/10"> Październik</a>
+        <a href="/consumption/${year}/11"> Listopad</a>
+        <a href="/consumption/${year}/12"> Grudzień</a>
+        <a href="/consumption/${year}">Rocznie</a>
     </div>
 </body>
 </html>
