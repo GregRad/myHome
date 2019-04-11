@@ -39,6 +39,14 @@ public class ProductsController {
         model.addAttribute("allGroceries", groceries);
         return "Products_Summary";
     }
+    @GetMapping("list/{year}")
+    public String productsByYear(@PathVariable Integer year,
+    							 Model model) {
+    	List<ProductsDTO> products = productsService.findProductsByYear(year);
+    	model.addAttribute("productsByYear", products);
+    	return "Products_Summary";
+    }
+    
     @GetMapping("/{year}")
     public String allProductsByYear(@PathVariable Integer year,
     							   Model model) {
@@ -50,13 +58,7 @@ public class ProductsController {
         model.addAttribute("allHouseholds", households);
     	return "Products_By_Year";
     }
-    @GetMapping("list/{year}")
-    public String productsByYear(@PathVariable Integer year,
-    							 Model model) {
-    	List<ProductsDTO> products = productsService.findProductsByYear(year);
-    	model.addAttribute("productsByYear", products);
-    	return "Products_Summary";
-    }
+
     @GetMapping("/{year}/{month}") 
     public String productsByDate(@PathVariable Integer year,
     							  @PathVariable Integer month,

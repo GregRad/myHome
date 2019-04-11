@@ -24,4 +24,7 @@ public interface ConsumptionRepository extends JpaRepository<Consumption, Long> 
 
 	@Query("SELECT c FROM Consumption c WHERE MONTH(c.date) = :month AND c.type = :type")
 	List<Consumption> findConsumptionsTypeByMonth (@Param("month") Integer month, @Param("type") String type);
+	
+	@Query("SELECT c FROM Consumption c WHERE YEAR(c.date) = :year AND MONTH(c.date) = :month AND c.type = :type")
+	List<Consumption> findConsumptionsTypeByDate (@Param("year") Integer year, @Param("month") Integer month, @Param("type") String type);
 }
