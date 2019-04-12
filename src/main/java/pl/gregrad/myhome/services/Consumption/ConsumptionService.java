@@ -115,6 +115,7 @@ public class ConsumptionService {
     	}
     	return findConsumptionsByMonthAndType;
     }
+    public List
     
     public void delete(Long id) {
         consumptionRepository.delete(consumptionRepository.findOne(id));
