@@ -45,6 +45,19 @@ public class ConsumptionController {
     	return "Consumption_By_Year";
     }
    
-  
+    @GetMapping("/{year}/{month}")
+    public String consumptionByDate(@PathVariable Integer year,
+    								@PathVariable Integer month,
+    								Model model) {
+    	List<ConsumptionDTO> consumptionByYear = consumptionService.findConsumptionsByYear(year);
+    	List<ConsumptionDTO> coldWater = consumptionService.findConsumprionsByDate(year, month,"Zimna woda");
+    	List<ConsumptionDTO> hotWater = consumptionService.findConsumprionsByDate(year, month, "Goraca woda");
+    	List<ConsumptionDTO> electricity = consumptionService.findConsumprionsByYearAndType(year, month, "Prad");
+    	model.addAttribute("consumptonByYear", consumptionByYear);
+    	model.addAttribute("coldWater", coldWater);
+    	model.addAttribute("hotWater", hotWater);
+    	model.addAttribute("electricty", electricity);
+    	return "Consumption_By_Month";
+    }
 
 }
