@@ -61,7 +61,7 @@ public class ConsumptionService {
     }
     public List<ConsumptionDTO> findConsumptionsByYear (Integer year) {
     	List<Consumption> consumptions = consumptionRepository.findConsumptionsByYear(year);
-    	List<ConsumptionDTO> findConsumptionsByYear = findConsumptionsByYear(year);
+    	List<ConsumptionDTO> findConsumptionsByYear = new ArrayList<>();
     	for (Consumption c : consumptions) {
     		ConsumptionDTO consumptionsByYear = new ConsumptionDTO();
      		consumptionsByYear.setName(c.getName());
