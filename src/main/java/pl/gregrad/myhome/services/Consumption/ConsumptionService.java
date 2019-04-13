@@ -115,7 +115,20 @@ public class ConsumptionService {
     	}
     	return findConsumptionsByMonthAndType;
     }
-    public List
+    public List<ConsumptionDTO> findConsumptionByDateAndType (Integer year, Integer month, String type) {
+    	List<Consumption> consumptions = consumptionRepository.findConsumptionsTypeByDate(year, month, type);
+    	List<ConsumptionDTO> findConsumptionsByDateAndType = new ArrayList<>();
+    	for (Consumption c : consumptions) {
+    		ConsumptionDTO consumptionsByDateAndType = new ConsumptionDTO();
+    		consumptionsByDateAndType.setDate(c.getDate());
+    		consumptionsByDateAndType.setName(c.getName());
+    		consumptionsByDateAndType.setType(c.getType());
+    		consumptionsByDateAndType.setValue(c.getValue());
+    		consumptionsByDateAndType.setId(c.getId());
+    		findConsumptionsByDateAndType.add(consumptionsByDateAndType);
+    	}
+    	return findConsumptionsByDateAndType;
+    }
     
     public void delete(Long id) {
         consumptionRepository.delete(consumptionRepository.findOne(id));
