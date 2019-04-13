@@ -22,7 +22,7 @@
     <br>
     <a href="/consumption/add_Consumption"> add consumption</a>
     <br>
-    <a href="/consumption/all_Consumptions"> consumption list</a>
+    <a href="/consumption/list"> consumption list</a>
     <br>
     <br>
     <a href="/products/add_Product"> add product</a>

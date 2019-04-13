@@ -20,8 +20,6 @@
     <div>
     	<a href="list/2019">2019</a>
     	<br>
-    	<a href="list/2100">2100</a>
-    	<br>
     	<a href="list/2109">2109</a>
     </div>
     <br>
