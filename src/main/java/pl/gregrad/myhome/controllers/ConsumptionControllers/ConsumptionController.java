@@ -50,9 +50,9 @@ public class ConsumptionController {
     								@PathVariable Integer month,
     								Model model) {
     	List<ConsumptionDTO> consumptionByYear = consumptionService.findConsumptionsByYear(year);
-    	List<ConsumptionDTO> coldWater = consumptionService.findConsumprionsByDate(year, month,"Zimna woda");
-    	List<ConsumptionDTO> hotWater = consumptionService.findConsumprionsByDate(year, month, "Goraca woda");
-    	List<ConsumptionDTO> electricity = consumptionService.findConsumprionsByYearAndType(year, month, "Prad");
+    	List<ConsumptionDTO> coldWater = consumptionService.findConsumptionByDateAndType(year, month,"Zimna woda");
+    	List<ConsumptionDTO> hotWater = consumptionService.findConsumptionByDateAndType(year, month, "Goraca woda");
+    	List<ConsumptionDTO> electricity = consumptionService.findConsumptionByDateAndType(year, month, "Prad");
     	model.addAttribute("consumptonByYear", consumptionByYear);
     	model.addAttribute("coldWater", coldWater);
     	model.addAttribute("hotWater", hotWater);

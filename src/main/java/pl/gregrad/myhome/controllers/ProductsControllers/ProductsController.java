@@ -29,16 +29,16 @@ public class ProductsController {
 //    	model.addAttribute("numbers", years);
         return "Products";
     }
-    @GetMapping("/all_Products")
-    public String products (Model model) {
-        List<ProductsDTO> products = productsService.findAllProducts();
-        List<ProductsDTO> households = productsService.findProductByCategory("Gospodarcze");
-        List<ProductsDTO> groceries = productsService.findProductByCategory("Spozywcze");
-        model.addAttribute("allProducts", products);
-        model.addAttribute("allHouseholds", households);
-        model.addAttribute("allGroceries", groceries);
-        return "Products_Summary";
-    }
+//    @GetMapping("/all_Products")
+//    public String products (Model model) {
+//        List<ProductsDTO> products = productsService.findAllProducts();
+//        List<ProductsDTO> households = productsService.findProductByCategory("Gospodarcze");
+//        List<ProductsDTO> groceries = productsService.findProductByCategory("Spozywcze");
+//        model.addAttribute("allProducts", products);
+//        model.addAttribute("allHouseholds", households);
+//        model.addAttribute("allGroceries", groceries);
+//        return "Products_Summary";
+//    }
     @GetMapping("list/{year}")
     public String productsByYear(@PathVariable Integer year,
     							 Model model) {
@@ -71,16 +71,4 @@ public class ProductsController {
     	model.addAttribute("productsByDate", products);
     	return "Products_By_Month";
     }
-//    @GetMapping("/{year}/{month}")
-//    public String date (@PathVariable Integer year,
-//    					@PathVariable Integer month,
-//    					Model model) {
-//        List<ProductsDTO> products = productsService.findProductByDate(year, month);
-//        List<ProductsDTO> groceries = productsService.findCategorizedProduct(year, month, "Gospodarcze");
-//        List<ProductsDTO> households = productsService.findCategorizedProduct(year, month, "Spozywcze");
-//        model.addAttribute("productsByDate", products);
-//        model.addAttribute("allGroceries", groceries);
-//        model.addAttribute("allHouseholds", households);
-//        return "Products_By_Month";
-//    }
 }
