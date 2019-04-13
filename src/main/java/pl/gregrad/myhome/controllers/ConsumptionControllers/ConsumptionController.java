@@ -41,7 +41,7 @@ public class ConsumptionController {
     	model.addAttribute("consumptonByYear", consumptionByYear);
     	model.addAttribute("coldWater", coldWater);
     	model.addAttribute("hotWater", hotWater);
-    	model.addAttribute("electricty", electricity);
+    	model.addAttribute("electricity", electricity);
     	return "Consumption_By_Year";
     }
    
@@ -56,7 +56,7 @@ public class ConsumptionController {
     	model.addAttribute("consumptonByYear", consumptionByYear);
     	model.addAttribute("coldWater", coldWater);
     	model.addAttribute("hotWater", hotWater);
-    	model.addAttribute("electricty", electricity);
+    	model.addAttribute("electricity", electricity);
     	return "Consumption_By_Month";
     }
 
