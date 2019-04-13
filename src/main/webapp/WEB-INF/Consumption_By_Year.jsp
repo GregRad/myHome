@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	<table>
+<br>
+	<table border="2px">
 		Zimna woda
+		<br>
+		<br>
 		<tr>
 			<th>
 				Wartosc
@@ -19,7 +22,7 @@
 				Jednostka
 			</th>
 			<th>
-				Typ
+				Data
 			</th>
 		</tr>
 		<c:forEach items="${coldWater}" var="coldwater">
@@ -31,13 +34,17 @@
 				${coldwater.name}
 			</td>
 			<td>
-				${coldwater.type}
+				${coldwater.date}
 			</td>
 		</tr>
 		</c:forEach>
 	</table>
-	<table>
+	<br>
+	<br>
+	<table border="2px">
 		Ciepla woda
+		<br>
+		<br>
 		<tr>
 			<th>
 				Wartosc
@@ -46,7 +53,7 @@
 				Jednostka
 			</th>
 			<th>
-				Typ
+				Data
 			</th>
 		</tr>
 		<c:forEach items="${hotWater}" var="hotwater">
@@ -58,13 +65,17 @@
 				${hotwater.name}
 			</td>
 			<td>
-				${hotwater.type}
+				${hotwater.date}
 			</td>
 		</tr>
 		</c:forEach>
 	</table>
-	<table>
+	<br>
+	<br>
+	<table border="2px">
 		Energia elektryczna
+		<br>
+		<br>
 		<tr>
 			<th>
 				Wartosc
@@ -73,19 +84,19 @@
 				Jednostka
 			</th>
 			<th>
-				Typ
+				Data
 			</th>
 		</tr>
-		<c:forEach items="${electricty}" var="electricty">
+		<c:forEach items="${electricity}" var="electricity">
 		<tr>
 			<td>
-				${electricty.value}
+				${electricity.value}
 			</td>
 			<td>
-				${electricty.name}
+				${electricity.name}
 			</td>
 			<td>
-				${electricty.type}
+				${electricity.date}
 			</td>
 		</tr>
 		</c:forEach>
