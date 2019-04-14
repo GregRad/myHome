@@ -7,7 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class ConsumptionDTO {
 
     private Long id;
-    private String name;
+    private String unit;
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDate date;
     private String value;
@@ -21,12 +21,12 @@ public class ConsumptionDTO {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
     public LocalDate getDate() {

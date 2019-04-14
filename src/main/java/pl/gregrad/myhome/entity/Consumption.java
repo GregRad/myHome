@@ -10,7 +10,7 @@ public class Consumption {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    private String unit;
     private LocalDate date;
     private String value;
     private String type;
@@ -23,12 +23,12 @@ public class Consumption {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUnit() {
+        return unit;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
    
     public LocalDate getDate() {
