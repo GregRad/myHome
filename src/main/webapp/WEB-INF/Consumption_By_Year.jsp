@@ -31,7 +31,7 @@
 				${coldwater.value}
 			</td>
 			<td>
-				${coldwater.name}
+				${coldwater.unit}
 			</td>
 			<td>
 				${coldwater.date}
@@ -62,7 +62,7 @@
 				${hotwater.value}
 			</td>
 			<td>
-				${hotwater.name}
+				${hotwater.unit}
 			</td>
 			<td>
 				${hotwater.date}
@@ -93,7 +93,7 @@
 				${electricity.value}
 			</td>
 			<td>
-				${electricity.name}
+				${electricity.unit}
 			</td>
 			<td>
 				${electricity.date}
