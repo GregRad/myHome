@@ -26,7 +26,7 @@ public class ConsumptionService {
         for (Consumption c : consumptions) {
             ConsumptionDTO allConsumptions = new ConsumptionDTO();
             allConsumptions.setId(c.getId());
-            allConsumptions.setName(c.getName());
+            allConsumptions.setUnit(c.getUnit());
             allConsumptions.setValue(c.getValue());
             allConsumptions.setType(c.getType());
             allConsumptions.setDate(c.getDate());
@@ -39,7 +39,7 @@ public class ConsumptionService {
         Consumption consumption = consumptionRepository.findOne(id);
         ConsumptionDTO findConsumption = new ConsumptionDTO();
         findConsumption.setId(consumption.getId());
-        findConsumption.setName(consumption.getName());
+        findConsumption.setUnit(consumption.getUnit());
         findConsumption.setValue(consumption.getValue());
         findConsumption.setDate(consumption.getDate());
         findConsumption.setType(consumption.getType());
@@ -52,7 +52,7 @@ public class ConsumptionService {
     		ConsumptionDTO consumptionByType = new ConsumptionDTO();
     		consumptionByType.setId(c.getId());
     		consumptionByType.setDate(c.getDate());
-    		consumptionByType.setName(c.getName());
+    		consumptionByType.setUnit(c.getUnit());
     		consumptionByType.setType(c.getType());
     		consumptionByType.setValue(c.getValue());
     		findConsumptionByType.add(consumptionByType);
@@ -64,7 +64,7 @@ public class ConsumptionService {
     	List<ConsumptionDTO> findConsumptionsByYear = new ArrayList<>();
     	for (Consumption c : consumptions) {
     		ConsumptionDTO consumptionsByYear = new ConsumptionDTO();
-     		consumptionsByYear.setName(c.getName());
+     		consumptionsByYear.setUnit(c.getUnit());
      		consumptionsByYear.setValue(c.getValue());
      		consumptionsByYear.setType(c.getType());
      		consumptionsByYear.setDate(c.getDate());
@@ -78,7 +78,7 @@ public class ConsumptionService {
     	List<ConsumptionDTO> findConsumptionsByMonth = new ArrayList<ConsumptionDTO>();
     	for (Consumption c : consumptions) {
     		ConsumptionDTO consumptionsByMonth = new ConsumptionDTO();
-    		consumptionsByMonth.setName(c.getName());
+    		consumptionsByMonth.setUnit(c.getUnit());
     		consumptionsByMonth.setValue(c.getValue());
     		consumptionsByMonth.setType(c.getType());
     		consumptionsByMonth.setDate(c.getDate());
@@ -92,7 +92,7 @@ public class ConsumptionService {
     	List<ConsumptionDTO> findConsumptionsByYearAndType = new ArrayList<ConsumptionDTO>();
     	for (Consumption c : consumptions) {
     		ConsumptionDTO consumptionsByYearAndType = new ConsumptionDTO();
-    		consumptionsByYearAndType.setName(c.getName());
+    		consumptionsByYearAndType.setUnit(c.getUnit());
     		consumptionsByYearAndType.setValue(c.getValue());
     		consumptionsByYearAndType.setDate(c.getDate());
     		consumptionsByYearAndType.setId(c.getId());
@@ -106,7 +106,7 @@ public class ConsumptionService {
     	List<ConsumptionDTO> findConsumptionsByMonthAndType = new ArrayList<ConsumptionDTO>();
     	for (Consumption c : consumptions) {
     		ConsumptionDTO consumptionsByMonthAndType = new ConsumptionDTO();
-    		consumptionsByMonthAndType.setName(c.getName());
+    		consumptionsByMonthAndType.setUnit(c.getUnit());
     		consumptionsByMonthAndType.setValue(c.getValue());
     		consumptionsByMonthAndType.setDate(c.getDate());
     		consumptionsByMonthAndType.setId(c.getId());
@@ -121,7 +121,7 @@ public class ConsumptionService {
     	for (Consumption c : consumptions) {
     		ConsumptionDTO consumptionsByDateAndType = new ConsumptionDTO();
     		consumptionsByDateAndType.setDate(c.getDate());
-    		consumptionsByDateAndType.setName(c.getName());
+    		consumptionsByDateAndType.setUnit(c.getUnit());
     		consumptionsByDateAndType.setType(c.getType());
     		consumptionsByDateAndType.setValue(c.getValue());
     		consumptionsByDateAndType.setId(c.getId());
@@ -136,7 +136,7 @@ public class ConsumptionService {
 
     public void edit(ConsumptionDTO consumption) {
         Consumption editConsumption = consumptionRepository.findOne(consumption.getId());
-        editConsumption.setName(consumption.getName());
+        editConsumption.setUnit(consumption.getUnit());
         editConsumption.setValue(consumption.getValue());
         editConsumption.setDate(consumption.getDate());
         editConsumption.setType(consumption.getType());

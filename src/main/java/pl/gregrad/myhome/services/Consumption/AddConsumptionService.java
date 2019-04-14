@@ -18,7 +18,7 @@ public class AddConsumptionService {
 
     public void addConsumption(ConsumptionDTO consumptionForm) {
         Consumption consumption = new Consumption();
-        consumption.setName(consumptionForm.getName());
+        consumption.setUnit(consumptionForm.getUnit());
         consumption.setValue(consumptionForm.getValue());
         consumption.setType(consumptionForm.getType());
         consumption.setDate(consumptionForm.getDate());
