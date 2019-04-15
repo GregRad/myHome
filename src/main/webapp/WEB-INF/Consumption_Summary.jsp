@@ -23,5 +23,7 @@
         <a href="/consumption/${year}/12"> Grudzień</a>
         <a href="/consumption/${year}">Rocznie</a>
     </div>
+    <br>
+      <a href="/"> Strona domowa</a>
 </body>
 </html>

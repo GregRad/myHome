@@ -23,5 +23,7 @@
         <a href="/products/${year}/12"> Grudzień</a>
         <a href="/products/${year}">Rocznie</a>
     </div>
+    <br>
+      <a href="/"> Strona domowa</a>
 </body>
 </html>

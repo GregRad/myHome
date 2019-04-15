@@ -22,5 +22,7 @@
     </form:select>
     <input type="submit" value="Zapisz">
     </form:form>
+    <br>
+      <a href="/"> Strona domowa</a>
 </body>
 </html>

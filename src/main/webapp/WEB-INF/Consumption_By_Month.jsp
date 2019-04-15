@@ -99,5 +99,7 @@
 		</tr>
 		</c:forEach>
 	</table>
+	<br>
+	  <a href="/"> Strona domowa</a>
 </body>
 </html>

@@ -20,5 +20,7 @@
     <form:input path="paymentDate" placeholder="Termin płatności"/>
     <input type="submit" value="Zapisz">
 </form:form>
+<br>
+  <a href="/"> Strona domowa</a>
 </body>
 </html>
