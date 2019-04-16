@@ -29,16 +29,6 @@ public class ProductsController {
 //    	model.addAttribute("numbers", years);
         return "Products";
     }
-//    @GetMapping("/all_Products")
-//    public String products (Model model) {
-//        List<ProductsDTO> products = productsService.findAllProducts();
-//        List<ProductsDTO> households = productsService.findProductByCategory("Gospodarcze");
-//        List<ProductsDTO> groceries = productsService.findProductByCategory("Spozywcze");
-//        model.addAttribute("allProducts", products);
-//        model.addAttribute("allHouseholds", households);
-//        model.addAttribute("allGroceries", groceries);
-//        return "Products_Summary";
-//    }
     @GetMapping("list/{year}")
     public String productsByYear(@PathVariable Integer year,
     							 Model model) {
@@ -56,6 +46,7 @@ public class ProductsController {
     	model.addAttribute("allProductsByYear", products);
         model.addAttribute("allGroceries", groceries);
         model.addAttribute("allHouseholds", households);
+        model.addAttribute("year", year);
     	return "Products_By_Year";
     }
 
@@ -69,6 +60,7 @@ public class ProductsController {
         model.addAttribute("allHouseholds", households);
         model.addAttribute("allGroceries", groceries);
     	model.addAttribute("productsByDate", products);
+    	model.addAttribute("year", year);
     	return "Products_By_Month";
     }
 }
