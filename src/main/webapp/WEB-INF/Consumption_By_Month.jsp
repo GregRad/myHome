@@ -101,5 +101,6 @@
 	</table>
 	<br>
 	  <a href="/"> Strona domowa</a>
+	  <a href="/consumption/list/${year}">Cofnij</a>
 </body>
 </html>

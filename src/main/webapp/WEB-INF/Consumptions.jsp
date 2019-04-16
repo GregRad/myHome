@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+	<a href="/"> Strona domowa</a>
+	<br>
+	<br>
         Podsumowanie zuzycia
     <br>
     <br>
@@ -24,6 +27,6 @@
     </div>
     <br>
     <br>
-    <a href="/"> Strona domowa</a>
+    <a href="/"> Cofnij</a>
 </body>
 </html>

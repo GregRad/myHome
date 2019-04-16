@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+wg miesiaca
+ <a href="/"> Strona domowa</a>
+ <br>
+ <br>
 <div>
         <a href="/consumption/${year}/01"> Styczen</a>
         <a href="/consumption/${year}/02"> Luty</a>
@@ -24,6 +28,7 @@
         <a href="/consumption/${year}">Rocznie</a>
     </div>
     <br>
-      <a href="/"> Strona domowa</a>
+     
+      <a href="/consumption/list"> Cofnij </a>
 </body>
 </html>

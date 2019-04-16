@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-Podsumowanie zakupów
+<a href="/"> Strona domowa</a>
 <br>
 <br>
 <table border="2px">
@@ -98,8 +98,6 @@ Podsumowanie zakupów
     </tr>
 </table>
 <br>
-<a href="/"> Strona domowa</a>
-<br>
-<a href="/products/list">Cofnij</a>
+<a href="/products/list/${year}">Cofnij</a>
 </body>
 </html>

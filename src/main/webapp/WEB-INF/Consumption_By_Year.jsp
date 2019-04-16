@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<a href="/"> Strona domowa</a>
 <br>
+<br>
+wg roku
 	<table border="2px">
 		Zimna woda
 		<br>
@@ -102,6 +105,6 @@
 		</c:forEach>
 	</table>
 	<br>
-	  <a href="/"> Strona domowa</a>
+	  <a href="/"> Cofnij a</a>
 </body>
 </html>
